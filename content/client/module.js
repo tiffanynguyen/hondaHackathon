@@ -18,7 +18,7 @@
 
         //views /controllers
         'client.crud',
-        'client.hackers'
+        //'client.hackers'  //commented out Grant Griffin test commit
     ])
 
     angular.module('client')
@@ -38,7 +38,7 @@
     ];
 
     function RouteConfig($stateProvider, $urlRouterProvider, $locationProvider) {
-        $urlRouterProvider.otherwise('/hackers/list');
+        //$urlRouterProvider.otherwise('/hackers/list');
         $locationProvider.html5Mode(true);
     }
 })();
