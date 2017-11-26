@@ -14,6 +14,7 @@
         init()
 
         function init() {
+            vm.tagline = 'Tiffany!'
             vm.tagline = 'Hack The World!'
 
             if ($stateParams.id) {
