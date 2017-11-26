@@ -15,6 +15,7 @@
 
         function init() {
             vm.tagline = 'Tiffany!'
+            vm.tagline = 'Hack The World!'
 
             if ($stateParams.id) {
                 hackerService.readById($stateParams.id)
