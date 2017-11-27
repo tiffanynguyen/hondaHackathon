@@ -1,4 +1,4 @@
-<form class="form-inline" ng-show="lRCtrl.showLogin">
+<form class="form-inline" ng-show="$ctrl.showForm">
     <label class="sr-only" for="inlineFormInputGroup">Username</label>
     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
         <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
@@ -15,7 +15,7 @@
     <button type="submit" class="btn btn-sm btn-success">Submit</button>
 </form>
 
-<div class="row" ng-show="lRCtrl.showRegister">
+<div class="row" ng-show="$ctrl.showForm">
     <!-- begin col-6 -->
     <div class="col-md-12">
         <!-- begin panel -->
@@ -29,25 +29,25 @@
                     <div class="form-group has-feedback">
                         <label class="control-label">Name*</label>
                         <div>
-                            <input type="text" ng-model="lRCtrl.name" class="form-control" name="name" placeholder="">
+                            <input type="text" ng-model="$ctrl.name" class="form-control" name="name" placeholder="">
                         </div>
                     </div>
                     <div class="form-group has-feedback">
                         <label class="control-label">Contact Email*</label>
                         <div>
-                            <input ng-model="lRCtrl.email" class="form-control" name="email" placeholder="tiffany123@gmail.com">
+                            <input ng-model="$ctrl.email" class="form-control" name="email" placeholder="tiffany123@gmail.com">
                         </div>
                     </div>
                     <div class="form-group has-feedback">
                         <label class="control-label">Password*</label>
                         <div>
-                            <input type="password" ng-model="lRCtrl.password" class="form-control" name="password" placeholder="tiffany123@gmail.com">
+                            <input type="password" ng-model="$ctrl.password" class="form-control" name="password" placeholder="tiffany123@gmail.com">
                         </div>
                     </div>
                     <div class="form-group has-feedback">
                         <label class="control-label">Confirm Password</label>
                         <div>
-                            <input type="password" ng-model="lRCtrl.confirmPassword" class="form-control" name="confirmPassword">
+                            <input type="password" ng-model="$ctrl.confirmPassword" class="form-control" name="confirmPassword">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-sm btn-success">Submit</button>
