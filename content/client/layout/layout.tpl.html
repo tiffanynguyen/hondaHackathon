@@ -3,12 +3,43 @@
         <!-- HEADER -->
         <nav class="navbar navbar-inverse">
             <div class="navbar-header">
-                <a class="navbar-brand" ui-sref="main">Stencil: Node and Angular</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" ui-sref="main" style="font-size: 24px; margin: 0 30px; color:darkcyan">VroO</a>
             </div>
             <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
-            <ul class="nav navbar-nav">
-                <li><a ui-sref="site.hackers.list">Hackers</a></li>
-            </ul>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="nav navbar-nav pull-right">
+                    <li style="padding-left: 15px"><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+               
+                <ul class="nav navbar-nav">
+                    <!-- <li><a ui-sref="site.hackers.list">Hackers</a></li> -->
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Map<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Traffic</a></li>
+                            <li><a href="#">Parking</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Itinerary</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Profile<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">My Itinerary</a></li>
+                            <li><a href="#">Interests</a></li>
+                            <li><a href="#">Recommendations</a></li>
+                            <li><a href="#">Groups</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <!-- ANGULAR DYNAMIC CONTENT -->
         <div ui-view="content"></div>
