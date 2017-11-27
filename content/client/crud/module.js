@@ -1,7 +1,6 @@
 /* global angular */
 (function () {
     'use strict';
-
     angular.module('client.crud', [])
     angular.module('client.crud').config(RouteConfig);
 
