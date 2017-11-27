@@ -3,23 +3,28 @@
         <!-- HEADER -->
         <nav class="navbar navbar-inverse">
             <div class="navbar-header">
-                <a class="navbar-brand" ui-sref="main">VroO</a>
+                <a class="navbar-brand" ui-sref="main" style="font-size: 24px; margin: 0 30px; color:darkcyan">VroO</a>
             </div>
             <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
             <div class="collapse navbar-collapse navbar-toggleable-xs">
+                <ul class="nav navbar-nav pull-right">
+                    <li style="padding-left: 15px"><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+               
                 <ul class="nav navbar-nav">
-                <!-- <li><a ui-sref="site.hackers.list">Hackers</a></li> -->
-                <li class="active"><a href="#">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Map<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Traffic</a></li>
-                        <li><a href="#">Parking</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Itinerary</a></li>
-                <li class="dropdown">
+                    <!-- <li><a ui-sref="site.hackers.list">Hackers</a></li> -->
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Map<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Traffic</a></li>
+                            <li><a href="#">Parking</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Itinerary</a></li>
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Profile<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">My Itinerary</a></li>
