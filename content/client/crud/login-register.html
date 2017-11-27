@@ -1,0 +1,58 @@
+<form class="form-inline" ng-show="lRCtrl.showLogin">
+    <label class="sr-only" for="inlineFormInputGroup">Username</label>
+    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+    </div>
+    <label class="sr-only" for="inlineFormInputGroup">Username</label>
+    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+        <input type="password" class="form-control" id="inlineFormInputGroup">
+    </div>
+    <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+        <label class="form-check-label">
+            <input class="form-check-input" type="checkbox"> Remember me
+        </label>
+    </div>
+    <button type="submit" class="btn btn-sm btn-success">Submit</button>
+</form>
+
+<div class="row" ng-show="lRCtrl.showRegister">
+    <!-- begin col-6 -->
+    <div class="col-md-12">
+        <!-- begin panel -->
+        <div class="panel panel-inverse" data-sortable-id="form-stuff-3">
+            <div class="panel-heading">
+                <h4 class="panel-title">Register Here!</h4>
+            </div>
+            <div class="panel-body">
+                <form name="registerForm" novalidate>
+                    <!--//////////////////////////Name Field/////////////////////////////-->
+                    <div class="form-group has-feedback">
+                        <label class="control-label">Name*</label>
+                        <div>
+                            <input type="text" ng-model="lRCtrl.name" class="form-control" name="name" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="control-label">Contact Email*</label>
+                        <div>
+                            <input ng-model="lRCtrl.email" class="form-control" name="email" placeholder="tiffany123@gmail.com">
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="control-label">Password*</label>
+                        <div>
+                            <input type="password" ng-model="lRCtrl.password" class="form-control" name="password" placeholder="tiffany123@gmail.com">
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="control-label">Confirm Password</label>
+                        <div>
+                            <input type="password" ng-model="lRCtrl.confirmPassword" class="form-control" name="confirmPassword">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-sm btn-success">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!-- end panel -->
+    </div>
