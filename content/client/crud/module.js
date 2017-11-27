@@ -9,18 +9,23 @@
 
     function RouteConfig($stateProvider) {
         $stateProvider
-            .state('site.login', {
-                url: '/login',
-                abstract: true
-            })
-            .state('site.login-register', {
-                url: '/login',
+            .state('site.home', {
+                url: '/home',
                 views: {
-                    'content@site': {
-                        templateUrl: 'client/crud/login-register.html',
-                        controller: 'loginRegisterController as lRCtrl'
+                    'content': {
+                        templateUrl: 'client/crud/home/home.html',
+                        controller: 'homeController as hCtrl'
                     }
                 }
             })
+            .state('site.profile', {
+                url: '/profile',
+                views: {
+                    'content': {
+                        component: 'userProfile'
+                    }
+                }
+            })
+            
     }
 })();
