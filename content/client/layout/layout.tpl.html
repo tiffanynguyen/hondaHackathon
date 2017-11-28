@@ -33,10 +33,10 @@
                     <li>
                         <a href="#" ui-sref="site.profile" class="dropdown-toggle white-words" data-toggle="dropdown">My Profile</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#" ng-click="lCtrl.selected = 'itinerary' ">My Itinerary</a></li>
+                            <li><a ui-sref="site.home({selected: 'itinerary'})">My Itinerary</a></li>
                             <li><a href="#" ng-click="lCtrl.selected = 'interests' ">Interests</a></li>
                             <li><a href="#" ng-click="lCtrl.selected = 'recommendations' ">Recommendations</a></li>
-                            <li><a href="#" ng-click="lCtrl.selected = 'groups' ">Groups</a></li>
+                            <li><a ui-sref="site.home({selected: 'groups'})">Groups</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -127,9 +127,6 @@
                 </div>
             </div>
         </section>
-    
-        <!-- Map Section -->
-        <div id="map"></div>
     
         <!-- Footer -->
         <footer>
