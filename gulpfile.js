@@ -75,7 +75,6 @@ function buildApp(fileset) {
 }
 
 gulp.task('watch', ['js'], function () {
-    gulp.watch('./content/themeContent/grayScale/scss/**/*.scss', ['sass']);
     
     gulp.watch(source.js.src, { interval: 200 }, ['js'])
 })
