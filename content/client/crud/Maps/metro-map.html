@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">Public Transit</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <div id='map'></div>
+        </div>
+    </div>
+</div>
+<script>
+    var map;
+    function initMap() {
+
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 34.0452385, lng: -118.2697483 },
+            zoom: 13
+        })
+        function addMarker(coords) {
+            let marker = new google.maps.Marker({
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                position: coords
+            })
+        }
+        addMarker({ lat: 34.0452385, lng: -118.2697483 })
+
+        var transitLayer = new google.maps.TransitLayer();
+        transitLayer.setMap(map);
+
+        angular.element(document).scope().$broadcast('mapLoader')
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDety0jWntP5GRs8rfL3ThOYYS-hg1-WZY&callback=initMap" async
+    defer></script>
