@@ -15,11 +15,10 @@
                 <div class="form-check mb-2 mr-sm-2 mb-sm-0">
                     <label class="inline">Remember Me</label>
                     <input class="form-check-input" type="checkbox">
-
                 </div>
                 <label></label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                    <button type="submit" style="background-color:darkcyan" class="btn">Submit</button>
+                    <button type="submit" style="background-color:darkcyan" ng-click="$ctrl.submitLogin()" class="btn">Submit</button>
                 </div>
             </form>
             <form id="registerForm" name="registerForm" ng-show="$ctrl.showRegisterForm" novalidate>
@@ -42,7 +41,7 @@
                 </div>
                 <label></label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                    <button type="submit" style="background-color:darkcyan" class="btn">Submit</button>
+                    <button type="submit" style="background-color:darkcyan" ng-click="$ctrl.submitReg()" class="btn">Submit</button>
                 </div>
             </form>
 
