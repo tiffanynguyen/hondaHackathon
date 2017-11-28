@@ -33,9 +33,9 @@
         }
 
         var flightPlanCoordinates = [
-        { lat: 34.0452385, lng: -118.2697483 },
-        { lat: 34.0439463, lng: -118.263255 },
-        { lat: 34.0451711, lng: -118.2680174 }
+        { lat: 34.056458, lng: -118.247131 },
+        { lat: 34.0419, lng: -118.2570 },
+        { lat: 34.0502, lng: -118.2571 }
         ];
         var flightPath = new google.maps.Polyline({
             path: flightPlanCoordinates,
@@ -46,9 +46,9 @@
         });
         flightPath.setMap(map);
 
-        addMarker({ lat: 34.0452385, lng: -118.2697483 })
-        addMarker({ lat: 34.0439463, lng: -118.263255 })
-        addMarker({ lat: 34.0451711, lng: -118.2680174 })
+        addMarker({ lat: 34.056458, lng: -118.247131 })
+        addMarker({ lat: 34.0419, lng: -118.2570})
+        addMarker({ lat: 34.0502, lng: -118.2571 })
 
         let trafficLayer = new google.maps.TrafficLayer();
         trafficLayer.setMap(map);
