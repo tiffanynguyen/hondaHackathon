@@ -1,44 +1,61 @@
 <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.1384027818885!2d-118.2717510844215!3d34.04032068060918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c7c76a01ef3d%3A0xf629c020e23429b5!2sLos+Angeles+Convention+Center!5e0!3m2!1sen!2sus!4v1511828760973" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
 
 <style>
-  /* Always set the map height explicitly to define the size of the div
+    /* Always set the map height explicitly to define the size of the div
      * element that contains the map. */
 
-  #map {
-    height: 500px;
-  }
+    #map {
+        height: 500px;
+    }
+    /* Optional: Makes the sample page fill the window. */
 
-  /* Optional: Makes the sample page fill the window. */
 </style>
 
 
 <div id='map'></div>
 <script>
-  var map;
-  function initMap() {
+    var map;
 
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: { lat: 34.0452385, lng: -118.2697483 },
-      zoom: 13
-    })
-    function addMarker(coords) {
-      let marker = new google.maps.Marker({
-        map: map,
-        draggable: true,
-        animation: google.maps.Animation.DROP,
-        position: coords
-      })
+    function initMap() {
+
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 34.0452385, lng: -118.2697483 },
+            zoom: 13
+        })
+
+        function addMarker(coords) {
+            let marker = new google.maps.Marker({
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                position: coords
+            })
+        }
+
+        var flightPlanCoordinates = [
+        { lat: 34.056458, lng: -118.247131 },
+        { lat: 34.0419, lng: -118.2570 },
+        { lat: 34.0502, lng: -118.2571 }
+        ];
+        var flightPath = new google.maps.Polyline({
+            path: flightPlanCoordinates,
+            geodesic: true,
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 2
+        });
+        flightPath.setMap(map);
+
+        addMarker({ lat: 34.056458, lng: -118.247131 })
+        addMarker({ lat: 34.0419, lng: -118.2570})
+        addMarker({ lat: 34.0502, lng: -118.2571 })
+
+        let trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
+
+        angular.element(document).scope().$broadcast('mapLoader')
     }
-    addMarker({ lat: 34.0452385, lng: -118.2697483 })
-    addMarker({ lat: 34.0439463, lng: -118.263255 })
-    addMarker({ lat: 34.0451711, lng: -118.2680174 })
 
-    let trafficLayer = new google.maps.TrafficLayer();
-    trafficLayer.setMap(map);
-
-    angular.element(document).scope().$broadcast('mapLoader')
-  }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDety0jWntP5GRs8rfL3ThOYYS-hg1-WZY&callback=initMap" async
-  defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDety0jWntP5GRs8rfL3ThOYYS-hg1-WZY&callback=initMap" async defer></script>
