@@ -70,15 +70,12 @@
                         </div>
                         <div class="form-group has-feedback">
                             <label class="control-label">Event </label>
-                            <div class="row">
-                                <div class="col-xs-8">
+                                <div>
                                     <input type="text" ng-model="travelCtrl.newItem.event" class="form-control" name="name" placeholder="">
                                 </div>
-                                <div class="col-xs-4">
-                                    <button class="button btn-default">Search</button>
-                                    <input style="color:black;" type="text"/>
-                                </div>
-                            </div>
+                                <!-- <div class="col-xs-6">
+                                    <input style="color:black;" placeholder="Search events..." class="form-control" col-xs-4"" type="text"/>
+                                </div> -->
                         </div>
                         <div class="form-group has-feedback">
                             <label class="control-label">Description</label>
@@ -89,7 +86,7 @@
                         <div class="form-group has-feedback">
                             <label class="control-label">Mode of Transportation</label>
                             <div>
-                                <select style="background-color: black;" ng-model="travelCtrl.newItem.transportation">
+                                <select style="background-color: white; color: black;" ng-model="travelCtrl.newItem.transportation">
                                     <option value="Car">Car</option>
                                     <option value="Train/Subway">Train/Subway</option>
                                     <option value="Bus">Bus</option>
