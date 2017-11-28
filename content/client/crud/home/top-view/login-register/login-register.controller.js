@@ -11,15 +11,16 @@
 
     angular.module('client.crud')
         .controller('loginRegisterController', LoginRegisterController)
-    LoginRegisterController.$inject = []
+    LoginRegisterController.$inject = ['$scope']
 
-    function LoginRegisterController() {
+    function LoginRegisterController($scope) {
         var vm = this
         vm.$onInit = init
-
+   
         init()
 
         function init() {
         }
+    
     }
 })();

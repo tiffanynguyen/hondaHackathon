@@ -1,58 +1,46 @@
-<form class="form-inline" ng-show="$ctrl.selected =='login' ">
-    <label class="sr-only" for="inlineFormInputGroup">Username</label>
-    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
-    </div>
-    <label class="sr-only" for="inlineFormInputGroup">Username</label>
-    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-        <input type="password" class="form-control" id="inlineFormInputGroup">
-    </div>
-    <div class="form-check mb-2 mr-sm-2 mb-sm-0">
-        <label class="form-check-label">
-            <input class="form-check-input" type="checkbox"> Remember me
-        </label>
-    </div>
-    <button type="submit" class="btn btn-sm btn-success">Submit</button>
-</form>
-
-<div class="row" ng-show="$ctrl.selected =='register' ">
-    <!-- begin col-6 -->
-    <div class="col-md-12">
-        <!-- begin panel -->
-        <div class="panel panel-inverse" data-sortable-id="form-stuff-3">
-            <div class="panel-heading">
-                <h4 class="panel-title"></h4>
-            </div>
-            <div class="panel-body">
-                <form name="registerForm" novalidate>
-                    <!--//////////////////////////Name Field/////////////////////////////-->
-                    <div class="form-group">
-                        <label class="control-label">Name*</label>
-                        <div>
-                            <input type="text" ng-model="$ctrl.name" class="form-control" name="name" placeholder="">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Contact Email*</label>
-                        <div>
-                            <input ng-model="$ctrl.email" class="form-control" name="email" placeholder="tiffany123@gmail.com">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Password*</label>
-                        <div>
-                            <input type="password" ng-model="$ctrl.password" class="form-control" name="password" placeholder="tiffany123@gmail.com">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Confirm Password</label>
-                        <div>
-                            <input type="password" ng-model="$ctrl.confirmPassword" class="form-control" name="confirmPassword">
-                        </div>
-                    </div>
+<div class="container text">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form id="loginForm" ng-show="$ctrl.selected == 'login' " novalidate>
+                <label>Username</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                </div>
+                <label>Username</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <input type="password" class="form-control" id="inlineFormInputGroup">
+                </div>
+                <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+                    <label>Remember Me</label>
+                    <input class="form-check-input" type="checkbox">
+                </div>
+                <label></label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                     <button type="submit" class="btn btn-sm btn-success">Submit</button>
-                </form>
-            </div>
+                </div>
+            </form>
+            <form id="registerForm" name="registerForm" div ng-show="$ctrl.selected =='register' "  novalidate>
+                <label>Name</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Name">
+                </div>
+                <label>Email</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <input type="email" class="form-control" id="inlineFormInputGroup" placeholder="Email">
+                </div>
+                <label>Password</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <input type="password" class="form-control" id="inlineFormInputGroup">
+                </div>
+                <label>Confirm Password</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <input type="password" class="form-control">
+                </div>
+                <label></label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <button type="submit" class="btn btn-sm btn-success">Submit</button>
+                </div>
+            </form>
         </div>
-        <!-- end panel -->
     </div>
+</div>
