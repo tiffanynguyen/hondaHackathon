@@ -17,6 +17,15 @@
                     }
                 }
             })
+            .state('site.itinerary', {
+                url: '/itinerary',
+                views: {
+                    'content': {
+                        templateUrl: 'client/crud/home/home.html',
+                        controller: 'homeController as hCtrl'
+                    }
+                }
+            })
             .state('site.profile', {
                 url: '/profile',
                 views: {
@@ -24,7 +33,6 @@
                         component: 'userProfile'
                     }
                 }
-            })
-            
+            })            
     }
 })();
