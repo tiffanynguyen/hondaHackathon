@@ -11,8 +11,8 @@
         <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="nav navbar-nav pull-right">
-                <li style="padding-left: 15px"><a class="white-words" ng-show="lCtrl.hideLoginReg" ui-sref="site.home({selected: 'login'})">Login</a></li>
-                <li><a class="white-words" ng-show="lCtrl.hideLoginReg"  ui-sref="site.home({selected: 'register'})">Register</a></li>
+                <li style="padding-left: 15px"><a class="white-words fontSize15" ng-show="lCtrl.hideLoginReg" ui-sref="site.home({selected: 'login'})">Login</a></li>
+                <li><a class="white-words fontSize15" ng-show="lCtrl.hideLoginReg"  ui-sref="site.home({selected: 'register'})">Register</a></li>
             </ul>
 
             <ul class="nav navbar-nav">
@@ -23,7 +23,7 @@
 
                 <li>
                         <li class="dropdown">
-                                <a ui-sref="site.profile" class="dropdown-toggle white-words" ng-hide="lCtrl.hideLoginReg" data-toggle="dropdown">My Profile</a>
+                                <a ui-sref="site.profile" class="dropdown-toggle white-words fontSize15" ng-hide="lCtrl.hideLoginReg" data-toggle="dropdown">My Profile</a>
                                 <ul class="dropdown-menu">
                                         <li><a style="cursor:pointer" ng-click="lCtrl.logout()">Logout</a></li>
                                     </ul>
@@ -55,7 +55,7 @@
     <div ui-view="content"></div>
 
     <!-- Footer -->
-    <footer>
+    <footer class="col-sm-12">
         <div class="container text-center">
             <p>Copyright &copy; Your Website 2017</p>
         </div>

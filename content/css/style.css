@@ -53,3 +53,7 @@ hr.style-four {
 .fontSize14 p {
     font-size: 14px;
 }
+
+.fontSize15 {
+    font-size: 15px !important;
+}
