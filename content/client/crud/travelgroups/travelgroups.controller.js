@@ -113,6 +113,11 @@
             alert("Your request to join this travel group has been sent!");
         }
 
+        vm.alertRequest2 = _alertRequest2;
+        function _alertRequest2(){
+            alert("Your request to merge with this travel group has been sent!");
+        }
+
     }
     
 })();
