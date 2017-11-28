@@ -9,7 +9,7 @@
     function RouteConfig($stateProvider) {
         $stateProvider
             .state('site.home', {
-                url: '/home',
+                url: '/home/:selected',
                 views: {
                     'content': {
                         templateUrl: 'client/crud/home/home.html',
