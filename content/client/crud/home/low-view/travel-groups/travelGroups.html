@@ -1,0 +1,18 @@
+<div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+                <h2>My Travel Groups</h2>
+                <div ng-repeat="item in $ctrl.items">
+                    <div style="border: solid 2px black; padding: 10px;">
+                        <h4><strong>{{item.name}} : {{item.event}}</strong></h4>
+                        <p><strong>Method of transportation: </strong>{{item.transportation}}</p>
+                        <p><strong>Number of participants: </strong>{{item.numPeople}}</p>
+                        <p><strong>Carpool: </strong><span ng-show="item.carpool">Yes</span><span ng-show="!item.carpool">No</span></p>
+                        <p><strong>Location: </strong>{{item.location}}</p>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    
