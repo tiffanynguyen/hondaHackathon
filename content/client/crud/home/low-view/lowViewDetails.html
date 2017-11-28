@@ -1,10 +1,10 @@
 <br/>
 <div class="container">
     <div class="row">
-        <div class="col-xs-6">
+        <div ng-class="{'col-xs-6': lvCtrl.homePage}">
             <home-Itinerary></home-Itinerary>
         </div>
-        <div class="col-xs-6">
+        <div ng-if='lvCtrl.homePage' class="col-xs-6">
             <home-Travel-Groups></home-Travel-Groups>
         </div>
     </div>
