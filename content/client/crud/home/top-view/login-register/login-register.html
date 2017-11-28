@@ -1,21 +1,21 @@
 <div class="container">
     </br>
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-8 col-md-offset-2">
             <form id="loginForm" ng-show="$ctrl.showLoginForm" novalidate>
                 <h4>Login</h4>
-                <label class="fontSize15">Username</label>
+                <label style="font-size:15px">Username</label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                     <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
                 </div>
-                <label class="fontSize15">Password</label>
+                <label style="font-size:15px">Password</label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                     <input type="password" class="form-control" id="inlineFormInputGroup">
                 </div>
-                <div class="form-check mb-2 mr-sm-2 mb-sm-0">
-                    <label class="inline"> 
-                    <input type="checkbox">Remember Me
-                </label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <label style="font-size:15px" class="inline" for="checkbox">
+                        <input type="checkbox"> Remember Me
+                    </label>
                 </div>
                 <label></label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
@@ -24,19 +24,19 @@
             </form>
             <form id="registerForm" name="registerForm" ng-show="$ctrl.showRegisterForm" novalidate>
                 <h4>Register</h4>
-                <label class="fontSize15">Username</label>
+                <label style="font-size:15px">Username</label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                     <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="coolguy12">
                 </div>
-                <label class="fontSize15">Email</label>
+                <label style="font-size:15px">Email</label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                     <input type="email" class="form-control" id="inlineFormInputGroup" placeholder="Email">
                 </div>
-                <label class="fontSize15">Password</label>
+                <label style="font-size:15px">Password</label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                     <input type="password" class="form-control" id="inlineFormInputGroup">
                 </div>
-                <label class="fontSize15">Confirm Password</label>
+                <label style="font-size:15px">Confirm Password</label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                     <input type="password" class="form-control">
                 </div>
@@ -47,101 +47,106 @@
             </form>
 
             <form ng-show="$ctrl.showOptions">
+
                 <h4>Filter Events By:</h4>
                 <label style="font-size:15px">Begin Date and Time:</label>
-                <div class="input-group">
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                     <input type="time" style="color:black">
                     <input type="date" style="color:black">
                 </div>
                 </br>
                 <label style="font-size:15px">End Date and Time:</label>
-                <div class="input-group">
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                     <input type="time" style="color:black">
                     <input type="date" style="color:black">
                 </div>
                 </br>
-                <label style="font-size:15px">Budget:</label>
-
-                    <input style="color:black; width:44px" ng-model="$ctrl.inputPriceRange" readonly>
-                    </br>
-                    </br>
-                    <span style="font-size:12px" class="pull-left">$0</span>
-                    <span style="font-size:12px" class="pull-right">$2k</span>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label style="font-size:15px">Budget:</label>
+                        <input style="color:black; width:44px" ng-model="$ctrl.inputPriceRange" readonly>
+                        </br>
+                        </br>
+                        <span style="font-size:12px" class="pull-left">$0</span>
+                        <span style="font-size:12px" class="pull-right">$2k</span>
                         <input type="range" min="0" max="2000" value="0" class="slider" ng-change="$ctrl.sliderChange($ctrl.priceRange)" ng-model="$ctrl.priceRange">
+                    </div>
+                </div>
                 </br>
                 <div style="float:left">
-                <label style="font-size:15px">Point of Interest:</label>
-                <div class="input-group">
-                    <label style="font-size:15px">
-                        <div class="input-group">
-                            <input type="checkbox">Shopping
-                    </label>
-                    </div>
-                    <label>
-                        <div class="input-group">
-                            <input type="checkbox">Outdoors
-                    </label>
-                    </div>
-                    <label>
-                        <div class="input-group">
-                            <input type="checkbox">Museums
-                    </label>
-                    </div>
-                    <label>
-                        <div class="input-group">
-                            <input type="checkbox">Restaurants
-                    </label>
-                    </div>
-                    <label>
-                        <div class="input-group">
-                            <input type="checkbox">Bars
-                    </label>
-                    </div>
-                    <label>
-                        <div class="input-group">
-                            <input type="checkbox">Clubs
-                    </label>
-                    </div>
-                    <label>
-                        <div class="input-group">
-                            <input type="checkbox">Cafes
-                    </label>
-                    </div>
-                    <label>
-                        <div class="input-group">
-                            <input type="checkbox">Tea Houses
-                    </label>
+                    <label style="font-size:15px">Point of Interest:</label>
+                    <div class="input-group">
+                        <label style="font-size:15px">
+                            <div class="input-group">
+                                <input type="checkbox">Shopping
+                        </label>
+                        </div>
+                        <label style="font-size:15px">
+                            <div class="input-group">
+                                <input type="checkbox">Outdoors
+                        </label>
+                        </div>
+                        <label style="font-size:15px">
+                            <div class="input-group">
+                                <input type="checkbox">Museums
+                        </label>
+                        </div>
+                        <label style="font-size:15px">
+                            <div class="input-group">
+                                <input type="checkbox">Restaurants
+                        </label>
+                        </div>
+                        <label style="font-size:15px">
+                            <div class="input-group">
+                                <input type="checkbox">Bars
+                        </label>
+                        </div>
+                        <label style="font-size:15px">
+                            <div class="input-group">
+                                <input type="checkbox">Clubs
+                        </label>
+                        </div>
+                        <label style="font-size:15px">
+                            <div class="input-group">
+                                <input type="checkbox">Cafes
+                        </label>
+                        </div>
+                        <label style="font-size:15px">
+                            <div class="input-group">
+                                <input type="checkbox">Tea Houses
+                        </label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div style="float:right">
-                <label style="font-size:15px">Transportation Methods Interested In: </label>
-                <div class="input-group" >
-                    <label style="font-size:15px">
-                        <div class="input-group">
-                            <input type="checkbox">Rideshare
-                    </label>
-                    </div>
-                    <label>
-                        <div class="input-group">
-                            <input type="checkbox">Biking
-                    </label>
-                    </div>
-                    <label>
-                        <div class="input-group">
-                            <input type="checkbox">Metro
-                    </label>
-                    </div>
-                    <label>
-                        <div class="input-group">
-                            <input type="checkbox">Car
-                    </label>
-                    </div>
+                <div style="float:right">
+                    <label style="font-size:15px">Transportation Methods Interested In: </label>
+                    <div class="input-group">
+                        <label style="font-size:15px">
+                            <div class="input-group">
+                                <input type="checkbox">Rideshare
+                        </label>
+                        </div>
+                        <label style="font-size:15px">
+                            <div class="input-group">
+                                <input type="checkbox">Biking
+                        </label>
+                        </div>
+                        <label style="font-size:15px">
+                            <div class="input-group">
+                                <input type="checkbox">Metro
+                        </label>
+                        </div>
+                        <label style="font-size:15px">
+                            <div class="input-group">
+                                <input type="checkbox">Car
+                        </label>
+                        </div>
 
+                    </div>
                 </div>
-            </div>
+
             </form>
-            
+
         </div>
     </div>
     </br>
