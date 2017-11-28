@@ -1,7 +1,12 @@
 /* global angular */
 (function () {
     'use strict';
-    angular.module('client.crud', [])
+    angular.module('client.crud', [
+        'ngAnimate'
+        , 'ngSanitize'
+        , 'ngTouch'
+        , 'ui.bootstrap'
+    ])
     angular.module('client.crud').config(RouteConfig);
 
     RouteConfig.$inject = ['$stateProvider'];

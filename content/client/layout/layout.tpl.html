@@ -53,13 +53,36 @@
             </div>
         </div>
     </header>
+    <div class="col-md-12">
+        <div style="background-color:darkcyan;">
+            <h3 style="text-align: center;">Destinations</h3>
+        </div>
+        <div class="carousel" uib-carousel active="lCtrl.active" no-pause='false' interval="lCtrl.myInterval" no-wrap="lCtrl.noWrapSlides">
+            <div uib-slide class="weekday-carousel-container" ng-repeat="slide in lCtrl.slides track by slide.id" index="$index">
+                <div class="col-md-4">
+                    <img class="resize-weekday" ng-src="{{lCtrl.slides[$index].image}}" style="margin:auto;">
+                    <p>{{lCtrl.slides[$index].title}}</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="resize-weekday" ng-src="{{lCtrl.slides[$index+1].image}}" style="margin:auto;">
+                    <p>{{lCtrl.slides[$index+1].title}}</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="resize-weekday" ng-src="{{lCtrl.slides[$index+2].image}}" style="margin:auto;">
+                    <p>{{lCtrl.slides[$index+2].title}}</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 
     <div ui-view="content"></div>
 
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; Your Website 2017</p>
+            <p>Copyright &copy; Vroo 2017</p>
         </div>
     </footer>
 </div>
