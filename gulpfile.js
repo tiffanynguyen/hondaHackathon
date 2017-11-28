@@ -75,7 +75,9 @@ function buildApp(fileset) {
     }
 }
 
-gulp.task('watch', ['js' ], function () {
+gulp.task('watch', ['js'], function () {
+    gulp.watch('./content/themeContent/grayScale/scss/**/*.scss', ['sass']);
+    
     gulp.watch(source.js.src, { interval: 200 }, ['js'])
 })
 
@@ -105,15 +107,16 @@ function buildVendor(scripts, dest) {
     return mergeStream(tasks)
 }
 
-//sass task
-// gulp.task('sass',  ()=> {
-//     return gulp.src('../themeContent/grayScale/scss/**/*.scss')
-//       .pipe(sass().on('error', sass.logError))
-//       .pipe(gulp.dest('../themeContent/grayScale/css'));
-//   });
+gulp.task('sass', () => {
+    return gulp.src('./content/themeContent/grayScale/scss/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./content/themeContent/grayScale/css'));
+});
+
+
 
 gulp.task('default', ['dev'])
-gulp.task('dev', ['vendor', 'js', 'watch'])
+gulp.task('dev', ['vendor', 'js', 'watch','sass'])
 
 const knownOptions = {
     string: 'packageName',
