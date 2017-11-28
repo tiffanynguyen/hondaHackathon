@@ -37,24 +37,26 @@
                 <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="nav navbar-nav pull-right">
-                        <li style="padding-left: 15px"><a href="#" ng-click="lCtrl.selected = 'login' ">Login</a></li>
-                        <li><a href="#" ng-click="lCtrl.selected = 'register' ">Register</a></li>
+                        <li   style="padding-left: 15px"><a class="white-words" href="#" ng-click="lCtrl.selected = 'login' ">Login</a></li>
+                        <li ><a  class="white-words" href="#" ng-click="lCtrl.selected = 'register' ">Register</a></li>
                     </ul>
                    
                     <ul class="nav navbar-nav">
                         <!-- <li><a ui-sref="site.hackers.list">Hackers</a></li> -->
-                        <li class="active"><a href="#">Home</a></li>
+                        <!-- <li class="active"><a href="#">Home</a></li> -->
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Map<b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle white-words" data-toggle="dropdown">Map</a>
                             <ul class="dropdown-menu">
                                 <li><a href="#" ng-click="lCtrl.selected = 'events' ">Events</a></li>
                                 <li><a href="#" ng-click="lCtrl.selected = 'traffic' ">Traffic</a></li>
                                 <li><a href="#" ng-click="lCtrl.selected = 'parking' ">Parking</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Itinerary</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Profile<b class="caret"></b></a>
+                        <li><a  class="dropdown white-words" href="#">Itinerary</a></li>
+                        <li><a  class="dropdown white-words" href="#">Travel Groups</a></li>
+
+                        <li >
+                            <a href="#" class="dropdown-toggle white-words" data-toggle="dropdown">My Profile</a>
                             <ul class="dropdown-menu">
                                 <li><a href="#" ng-click="lCtrl.selected = 'itinerary' ">My Itinerary</a></li>
                                 <li><a href="#" ng-click="lCtrl.selected = 'interests' ">Interests</a></li>
