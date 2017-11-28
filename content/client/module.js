@@ -18,7 +18,8 @@
 
         //views /controllers
         'client.crud',
-        //'client.hackers'  //commented out Grant Griffin test commit
+        'client.hackers'  //commented out Grant Griffin test commit
+        ,'client.themeHome'
     ])
 
     angular.module('client')
