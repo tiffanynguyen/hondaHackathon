@@ -5,7 +5,7 @@
 //             templateUrl: '/client/crud/home/top-view/quick-trip/quick-trip.html',
 //             controller: 'quickTripController',
 //             bindings: {
-//                 //selected: '<'
+//                 selected: '<'
 //             }
 //         })
         
