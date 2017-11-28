@@ -31,9 +31,9 @@
         }
 
         vm.friends = [
-            { name: 'Jacob', location: "London" },
-            { name: "Apu", location: 'London' },
-            { name: 'Mufasa', location: 'Lion King' }]
+            { name: 'David', location: "Van Nuys", img: 'https://trello-avatars.s3.amazonaws.com/cf1374e2d1177f100671fc3c19c51d51/50.png' },
+            { name: "Raymundo", location: 'Sunland', img: 'https://trello-avatars.s3.amazonaws.com/42062ba8381256528d8d6c52cb015207/50.png' },
+            { name: 'Grant', location: 'Westwood', img: 'https://trello-avatars.s3.amazonaws.com/434616a2921a22c813580774513fecb5/30.png' }]
 
         function _init() {
             vm.edit = {
