@@ -12,21 +12,17 @@
         <!-- core-info -->
         <div class="col-md-4 col-xs-9">
             <h3>User Info</h3>
-            <p>John Doe</p>
-            <p>likes</p>
-            <ul>
-                <li>Pina Coladas</li>
-                <li>Getting cought in the rain</li>
-            </ul>
+            <p>Name: {{pCtrl.profile.name}}</p>
+            <p>Age: {{pCtrl.profile.age}}</p>
+            <p>Sex: {{pCtrl.profile.sex}}</p>
         </div>
         <!-- group-info -->
         <div class="col-md-5 col-xs-9">
             <h3>Group Info</h3>
-            <p>Group Name</p>
+            <p>{{pCtrl.group.name}}</p>
             <p>Members</p>
             <ul>
-                <li>Tim</li>
-                <li>Lelas</li>
+                <li ng-repeat="member in pCtrl.group.members">{{member}}</li>
             </ul>
         </div>
         
