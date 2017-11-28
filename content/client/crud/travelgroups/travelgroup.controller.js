@@ -11,7 +11,7 @@
         
         vm.reload = _reload;
         function _reload(){
-            $state.go("site.travelgroup");
+            $state.reload();
         }
         
         vm.backRedirect = _backRedirect;

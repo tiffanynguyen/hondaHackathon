@@ -92,12 +92,6 @@
         vm.setGroup = _setGroup;
         function _setGroup(){
             $state.go("site.travelgroup");
-            // if (vm.openGroupDetails == true) {
-            //     vm.openGroupDetails = false;
-
-            // } else {
-            //     vm.openGroupDetails = true;
-            // }
         }
 
         vm.pushNewItem = _pushNewItem;
