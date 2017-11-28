@@ -16,7 +16,7 @@
         <!-- core-info -->
         <div class="col-md-3 col-xs-9">
             <h3>User Info
-                <a href='#' ng-click="pCtrl.edit.user = 'true'">edit</a>
+                <a href="#" ng-click="pCtrl.edit.user = 'true'">edit</a>
             </h3>
             <div ng-hide="pCtrl.edit.user">
                 <p>Name: {{pCtrl.profile.name}}</p>
@@ -42,7 +42,7 @@
         <!-- group-info -->
         <div class="col-md-3 col-xs-9">
             <h3>Group Info
-                <a href='#'>edit</a>
+                <a ui-sref="site.travelgroups">edit</a>
             </h3>
             <p>{{pCtrl.group.name}}</p>
             <h4 style="display:inline;">Members</h4>
