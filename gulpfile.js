@@ -1,5 +1,4 @@
 const es = require('event-stream')
-const sass = require('gulp-sass');
 const gulp = require('gulp')
 const minimist = require('minimist')
 const fs = require('fs')
@@ -107,16 +106,11 @@ function buildVendor(scripts, dest) {
     return mergeStream(tasks)
 }
 
-gulp.task('sass', () => {
-    return gulp.src('./content/themeContent/grayScale/scss/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./content/themeContent/grayScale/css'));
-});
 
 
 
 gulp.task('default', ['dev'])
-gulp.task('dev', ['vendor', 'js', 'watch','sass'])
+gulp.task('dev', ['vendor', 'js', 'watch'])
 
 const knownOptions = {
     string: 'packageName',

@@ -6,13 +6,13 @@ body {
   color: white;
   background-color: black; }
 
-html {
-  width: 100%;
-  height: 100%; }
-
 .intro-body{
   height:700px;
 }
+
+html {
+  width: 100%;
+  height: 100%; }
 
 h1,
 h2,

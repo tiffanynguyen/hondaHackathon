@@ -1,7 +1,7 @@
 
 <div id="page-top">
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,67 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
+
+  
+            <nav class="navbar navbar-inverse navbar-expand-lg fixed-top" id="mainNav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" ui-sref="main" style="font-size: 24px; margin: 0 30px; color:darkcyan">VroO</a>
+                </div>
+                <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="nav navbar-nav pull-right">
+                        <li style="padding-left: 15px"><a href="#" ng-click="lCtrl.selected = 'login' ">Login</a></li>
+                        <li><a href="#" ng-click="lCtrl.selected = 'register' ">Register</a></li>
+                    </ul>
+                   
+                    <ul class="nav navbar-nav">
+                        <!-- <li><a ui-sref="site.hackers.list">Hackers</a></li> -->
+                        <li class="active"><a href="#">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Map<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" ng-click="lCtrl.selected = 'events' ">Events</a></li>
+                                <li><a href="#" ng-click="lCtrl.selected = 'traffic' ">Traffic</a></li>
+                                <li><a href="#" ng-click="lCtrl.selected = 'parking' ">Parking</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Itinerary</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Profile<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" ng-click="lCtrl.selected = 'itinerary' ">My Itinerary</a></li>
+                                <li><a href="#" ng-click="lCtrl.selected = 'interests' ">Interests</a></li>
+                                <li><a href="#" ng-click="lCtrl.selected = 'recommendations' ">Recommendations</a></li>
+                                <li><a href="#" ng-click="lCtrl.selected = 'groups' ">Groups</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+          
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   <!-- Intro Header -->
   <header class="masthead">
