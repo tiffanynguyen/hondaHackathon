@@ -4,7 +4,7 @@
         <li ng-repeat="item in $ctrl.items">
             <div style="border: solid 2px black; padding: 10px;">
                 <h4><strong><a href="">{{item.name}}</a> : {{item.event}}</strong></h4>
-                <p><strong>Method of transportation: </strong>{{item.transportation}}<br/>
+                <p><strong>Mode of transportation: </strong>{{item.transportation}}<br/>
                 <strong>Number of participants: </strong>{{item.numPeople}}<br/>
                 <strong>Carpool: </strong><span ng-show="item.carpool">Yes</span><span ng-show="!item.carpool">No</span><br/>
                 <strong>Location: </strong>{{item.location}}</p>

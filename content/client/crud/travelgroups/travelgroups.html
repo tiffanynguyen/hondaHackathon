@@ -1,0 +1,58 @@
+<!-- begin page-header -->
+<div class="container">
+    <div class="page-header row">
+        <h1 style="display:inline;">{{travelCtrl.item.name}}</h1>
+        <div class="col-xs-3 pull-right">
+        </div>
+    </div>
+</div>
+
+<!-- profile-image -->
+
+<div class="container">
+    <div class="row">
+        <!-- core-info -->
+        <div class="col-md-5 col-xs-9">
+            <h3>Event: {{travelCtrl.item.event}}</h3>
+            <p>{{travelCtrl.item.description}}</p>
+            <p>Number of participants: {{travelCtrl.item.numPeople}}</p>
+            <p>Mode of transportation: {{travelCtrl.item.transportation}}</p>
+            <p>Location: {{travelCtrl.item.location}}</p>
+            <p>Carpool: <span ng-show="travelCtrl.item.carpool.isTrue">Yes</span>
+                        <span ng-show="!travelCtrl.item.carpool.isTrue">No</span>
+                    <span ng-show="travelCtrl.item.carpool.isTrue" style="padding-left: 2em">
+                       <br/>
+                        Available Seats: {{travelCtrl.item.carpool.seats}} <br/>
+                        <span style="padding-left: 2em"></span>Pickup Location: {{travelCtrl.item.carpool.location}} <br/>
+                        <span style="padding-left: 4em"></span>{{travelCtrl.item.carpool.location2}} <br/>
+                        <span style="padding-left: 2em"></span>Departure: {{travelCtrl.item.carpool.date}} {{travelCtrl.item.carpool.time}}<br/>
+                    </span>
+            </p>
+        </div>
+        <!-- group-info -->
+        <div class="col-md-5 col-xs-9">
+            <h3>Map</h3>
+            <mid-view></mid-View>
+        </div>
+        <!-- <div class="row">
+            <h3 class="col-xs-3" style="display:inline;">Interests</h3>
+            <div class="input-group sidebar-search col-xs-3">
+                <input type="text" class="form-control" name="pCtrl.searchBar" ng-model="pCtrl.searchBar" placeholder="Search popular interests"
+                />
+                <span class="input-group-btn">
+                    <button class="btn btn-inverse" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+
+            </div>
+            <div class="col-md-9 col-xs-9">
+                <ul>
+                    <li ng-repeat="interest in pCtrl.profile.interests">{{interest}}</li>
+                </ul>
+            </div>
+
+        </div> -->
+
+    </div>
+</div>
