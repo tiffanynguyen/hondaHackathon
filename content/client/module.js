@@ -7,9 +7,12 @@
         // 3rd party
         'ui.router',
         'ui.bootstrap',
+        'ngAnimate'
+        , 'ngTouch'
+     , 'ngSanitize'
 
         //base / common
-        'client.layout',
+        ,'client.layout',
         'client._common',
 
         //services

@@ -1,14 +1,12 @@
 {
     "chunks": {
         "vendor": [
-            "angular",
             "angular-ui-router",
             "angular-bootstrap"
         ]
     },
     "paths": {
         
-        "angular": "content/libs/angular/angular.min.js",
         "angular-ui-router": "content/libs/angular-ui-router/release/angular-ui-router.min.js",
         "angular-bootstrap": "content/libs/angular-bootstrap/ui-bootstrap-tpls.min.js"
     }

@@ -2,7 +2,12 @@
 (function() {
     'use strict'
 
-    angular.module('client.layout', ['ui.router'])
+    angular.module('client.layout', ['ui.router'
+    ,'ngAnimate'
+    , 'ngSanitize'
+    , 'ngTouch'
+    , 'ui.bootstrap'
+])
 
     angular.module('client.layout').config(RouteConfig)
 
