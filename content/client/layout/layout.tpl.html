@@ -12,8 +12,8 @@
             <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="nav navbar-nav pull-right">
-                    <li style="padding-left: 15px"><a class="white-words" href="#" ng-click="lCtrl.selected = 'login' ">Login</a></li>
-                    <li><a class="white-words" href="#" ng-click="lCtrl.selected = 'register' ">Register</a></li>
+                    <li style="padding-left: 15px"><a class="white-words" ui-sref="site.home({selected: 'login'})">Login</a></li>
+                    <li><a class="white-words" ui-sref="site.home({selected: 'register'})">Register</a></li>
                 </ul>
     
                 <ul class="nav navbar-nav">
