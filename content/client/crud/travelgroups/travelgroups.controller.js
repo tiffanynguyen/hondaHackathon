@@ -62,6 +62,33 @@
             }
         ];
 
+        vm.openTravelGroups = [
+            {
+                name: "COOKIES",
+                event: "Cookie Camp LA",
+                numPeople: 5,
+                transportation: "Walk",
+                carpool: false,
+                location: "810 Bakespace St, Los Angeles, CA 90015"
+            },
+            {
+                name: "Fun with Friends",
+                event: "JUST Comedy",
+                numPeople: 36,
+                transportation: "Car",
+                carpool: true,
+                location: "820 Thompson Avenue #34, Glendale, CA 91202"
+            },
+            {
+                name: "Beers and BBQ Party",
+                event: "BBQ & Craft Brews Festival",
+                numPeople: 14,
+                transportation: "bus",
+                carpool: false,
+                location: "532 S. Olive Street, Los Angeles, CA 90013"
+            }
+        ]
+
         vm.setGroup = _setGroup;
         function _setGroup(){
             if (vm.openGroupDetails == true) {
@@ -79,6 +106,16 @@
             var item = angular.copy(vm.newItem);
             vm.myTravelGroups.push(item);
             vm.newItem = {};
+        }
+
+        vm.alertRequest = _alertRequest;
+        function _alertRequest(){
+            alert("Your request to join this travel group has been sent!");
+        }
+
+        vm.alertRequest2 = _alertRequest2;
+        function _alertRequest2(){
+            alert("Your request to merge with this travel group has been sent!");
         }
 
     }
