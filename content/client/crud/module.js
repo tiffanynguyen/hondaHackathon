@@ -11,7 +11,7 @@
             .state('site.home', {
                 url: '/home',
                 views: {
-                    'content1': {
+                    'content': {
                         templateUrl: 'client/crud/home/home.html',
                         controller: 'homeController as hCtrl'
                     }
@@ -29,7 +29,7 @@
             .state('site.profile', {
                 url: '/profile',
                 views: {
-                    'content1': {
+                    'content': {
                         component: 'userProfile'
                     }
                 }
