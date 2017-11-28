@@ -20,14 +20,14 @@
         vm.addInterest = _addInterest
 
         vm.profile = {
-            name: "John Doe",
+            name: "Tiffany Nguyen",
             age: "22",
-            sex: "M",
+            sex: "F",
             interests: ["Cake", "Fun", "Sportsball"]
         }
         vm.group = {
-            name: "Summer Family Trip",
-            members: ["Tim", "Aya", "Ed"]
+            name: "Sports Party",
+            members: ["Raymundo Martinez", "Grant Griffin", "David Vergona", "Devonte Gabriel", "Nina Tran"]
         }
 
         vm.friends = [

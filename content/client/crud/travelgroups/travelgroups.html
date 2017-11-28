@@ -52,16 +52,6 @@
             </div>
         </div>
 </div>
-
-<div id="travelgroupview" ng-if="travelCtrl.openGroupDetails">
-    <div>
-        <br/>
-    <button class="button btn-lg btn-default icon-unshare" ng-click="travelCtrl.setGroup()" style="margin-left: 15px;">Back to Travel Groups</button>
-    <travelgroup-Details></travelgroup-Details>
-    </div>
-</div>
-
-
 <div ng-show="travelCtrl.create">
     <div>
         <div>
@@ -80,8 +70,14 @@
                         </div>
                         <div class="form-group has-feedback">
                             <label class="control-label">Event </label>
-                            <div>
-                                <input type="text" ng-model="travelCtrl.newItem.event" class="form-control" name="name" placeholder="">
+                            <div class="row">
+                                <div class="col-xs-8">
+                                    <input type="text" ng-model="travelCtrl.newItem.event" class="form-control" name="name" placeholder="">
+                                </div>
+                                <div class="col-xs-4">
+                                    <button class="button btn-default">Search</button>
+                                    <input style="color:black;" type="text"/>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group has-feedback">

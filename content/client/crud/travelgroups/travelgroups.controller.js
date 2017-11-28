@@ -4,9 +4,9 @@
         .module("client.crud")
         .controller("travelGroupsController", TravelGroupsController);
     
-    TravelGroupsController.$inject = [];
+    TravelGroupsController.$inject = ["$state"];
 
-    function TravelGroupsController() {
+    function TravelGroupsController($state) {
         var vm = this;
 
         vm.create = false;
@@ -91,13 +91,7 @@
 
         vm.setGroup = _setGroup;
         function _setGroup(){
-            if (vm.openGroupDetails == true) {
-                vm.openGroupDetails = false;
-                // $("#travelgroupview").addClass("hidden");
-            } else {
-                vm.openGroupDetails = true;
-                // $("#travelgroupview").removeClass("hidden");
-            }
+            $state.go("site.travelgroup");
         }
 
         vm.pushNewItem = _pushNewItem;
