@@ -26,7 +26,54 @@
         <div class="col-xs-7 fontSize14">
             <button style="background-color: black; margin-right: 10px;" class="btn-lg pull-left"><i class="button glyphicon glyphicon-user"></i></button>
             <h3>Map</h3>
-            <mid-view></mid-View>
+            <style>
+                    /* Always set the map height explicitly to define the size of the div
+                     * element that contains the map. */
+                
+                    #map {
+                        height: 500px;
+                    }
+                    /* Optional: Makes the sample page fill the window. */
+                
+                </style>
+                
+                
+                <div id='map'></div>
+                <script>
+                    var map;
+                
+                    function initMap() {
+                
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            center: { lat: 34.0452385, lng: -118.2697483 },
+                            zoom: 13
+                        })
+                
+                        function addMarker(coords) {
+                            let marker = new google.maps.Marker({
+                                map: map,
+                                draggable: true,
+                                animation: google.maps.Animation.DROP,
+                                position: coords
+                            })
+                        }
+                
+                        addMarker({ lat: 34.0404132, lng: -118.2626922 })
+                        addMarker({ lat: 34.040443, lng: -118.24396954})
+                        addMarker({ lat: 34.0404114, lng: -118.26436945 })
+                        addMarker({ lat: 34.04632125, lng: -118.264974 })
+                        addMarker({ lat: 34.04443146, lng: -118.2696986})
+                        addMarker({ lat: 34.04512167, lng: -118.2692432 })
+                
+                        let trafficLayer = new google.maps.TrafficLayer();
+                        trafficLayer.setMap(map);
+                
+                        angular.element(document).scope().$broadcast('mapLoader')
+                    }
+                
+                </script>
+                
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDety0jWntP5GRs8rfL3ThOYYS-hg1-WZY&callback=initMap" async defer></script>
             </div>
             <hr />
         </div>
@@ -46,14 +93,8 @@
                 </div>
                 <div class="form-group has-feedback">
                         <label class="control-label fontSize15 ">Event </label>
-                        <div class="row">
-                            <div class="col-xs-8">
+                        <div>
                                 <input type="text" ng-model="travCtrl.newItem.event" class="form-control" name="name" placeholder="">
-                            </div>
-                            <div class="col-xs-4">
-                                <button class="button btn-default">Search</button>
-                                <input style="color:black;" type="text"/>
-                            </div>
                         </div>
                     </div>
                 <div class="form-group has-feedback">
