@@ -42,6 +42,15 @@
                         controller: 'travelGroupsController as travelCtrl'
                     }
                 }
-            })           
+            })
+            .state('site.travelgroup', {
+                url: '/sportsparty',
+                views: {
+                    'content': {
+                        templateUrl: 'client/crud/travelgroups/travelgroup.html',
+                        controller: 'travelGroupController as travCtrl'
+                    }
+                }
+            })            
     }
 })();
