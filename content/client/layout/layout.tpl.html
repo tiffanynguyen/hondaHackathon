@@ -7,7 +7,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                <a class="navbar-brand" ui-sref="main" style="font-size: 24px; margin: 0 30px; color:darkcyan">VroO</a>
+                <a class="navbar-brand" ui-sref="main" style="font-size: 24px; margin: 0 30px; color:#42DCA3">VroO</a>
             </div>
             <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
             <div class="collapse navbar-collapse" id="mainNavbar">
@@ -17,6 +17,8 @@
                 </ul>
     
                 <ul class="nav navbar-nav">
+                    <!-- <li><a ui-sref="site.hackers.list">Hackers</a></li> -->
+                    <!-- <li class="active"><a href="#">Home</a></li> -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle white-words" data-toggle="dropdown">Map</a>
                         <ul class="dropdown-menu">
@@ -60,19 +62,29 @@
             </div>
         </header>
     
-        
+        <div ui-view="content"></div>
         <!-- About Section -->
         <section id="about" class="content-section text-center">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <h2>About Grayscale</h2>
-                        <div ui-view="content"></div>
+                        <p>Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download
+                            the template on
+                            <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme
+                            is open source, and you can use it for any purpose, personal or commercial.</p>
+                        <p>This theme features stock photos by
+                            <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy
+                            of
+                            <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
+                        <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with SASS and LESS files for easy
+                            customization!</p>
                     </div>
                 </div>
             </div>
         </section>
     
+        <!-- Download Section -->
         <section id="download" class="download-section content-section text-center">
             <div class="container">
                 <div class="col-lg-8 mx-auto">
@@ -117,7 +129,7 @@
         </section>
     
         <!-- Map Section -->
-        <!-- <div id="map"></div> -->
+        <div id="map"></div>
     
         <!-- Footer -->
         <footer>
