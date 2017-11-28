@@ -4,7 +4,7 @@
             templateUrl: 'client/crud/home/mid-view/mid-view.html',
             controller: 'midViewController as mvCtrl',
             bindings: {
-
+                itinerary: "<"
             }
         })
 
@@ -15,6 +15,7 @@
 
     function MidViewController($scope) {
         let vm = this
+        
 
 
         init()
@@ -23,6 +24,7 @@
             $scope.$on('mapLoader', data => {
                 console.log(data)
             })
+            
         }
 
     }

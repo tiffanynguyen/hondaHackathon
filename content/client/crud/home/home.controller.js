@@ -8,6 +8,8 @@
         vm.$onInit = init
         init()
 
+        
+
         function init() {
             
         }
