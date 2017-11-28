@@ -2,8 +2,8 @@
     angular.module('client.layout')
         .controller('layoutController', LayoutController)
 
-    LayoutController.$inject = ['$scope']
-    function LayoutController($scope) {
+    LayoutController.$inject = []
+    function LayoutController() {
         var vm = this
         
 

@@ -12,9 +12,9 @@
     angular.module('client.crud')
         .controller('loginRegisterController', LoginRegisterController)
 
-    LoginRegisterController.$inject = ['$scope', '$stateParams']
+    LoginRegisterController.$inject = ['$stateParams']
 
-    function LoginRegisterController($scope, $stateParams) {
+    function LoginRegisterController($stateParams) {
         var vm = this
 
 
@@ -22,7 +22,6 @@
         vm.sliderChange = _sliderChange
 
         function init() {
-            console.log($stateParams)
             vm.selected = $stateParams.selected
             if ($stateParams.selected == 'login') {
                 vm.showLoginForm = true
@@ -38,7 +37,6 @@
                 vm.showOptions = true
             }
 
-            
         }
 
         function _sliderChange(priceRange) {
