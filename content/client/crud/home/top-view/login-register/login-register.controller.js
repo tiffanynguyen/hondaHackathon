@@ -15,11 +15,19 @@
 
     function LoginRegisterController($scope) {
         var vm = this
+        
+        
         vm.$onInit = init
-   
-        init()
+
 
         function init() {
+            console.log($stateParams)
+            vm.selected = $stateParams.selected
+            //based on clicked of dropdown on nav bar
+            
+            
+
+
         }
     
     }
