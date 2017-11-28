@@ -74,7 +74,8 @@ function buildApp(fileset) {
     }
 }
 
-gulp.task('watch', ['js' ], function () {
+gulp.task('watch', ['js'], function () {
+    
     gulp.watch(source.js.src, { interval: 200 }, ['js'])
 })
 
@@ -103,6 +104,9 @@ function buildVendor(scripts, dest) {
     })
     return mergeStream(tasks)
 }
+
+
+
 
 gulp.task('default', ['dev'])
 gulp.task('dev', ['vendor', 'js', 'watch'])
