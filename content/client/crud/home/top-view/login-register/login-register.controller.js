@@ -1,4 +1,3 @@
-/* global angular */
 (function () {
     'use strict'
     angular.module('client.crud')
@@ -12,22 +11,15 @@
 
     angular.module('client.crud')
         .controller('loginRegisterController', LoginRegisterController)
-    LoginRegisterController.$inject = ['$stateParams', '$log']
+    LoginRegisterController.$inject = []
 
-    function LoginRegisterController($stateParams, $log) {
+    function LoginRegisterController() {
         var vm = this
-        
         vm.$onInit = init
 
         init()
 
         function init() {
-
-            //based on clicked of dropdown on nav bar
-            
-            
-
-
         }
     }
 })();
