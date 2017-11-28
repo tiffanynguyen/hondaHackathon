@@ -5,17 +5,19 @@
         <div class="col-xs-5 fontSize14">
             <h3><span style="color: #42DCA3; font-size: 24px">{{travCtrl.item.name}}</span> : {{travCtrl.item.event}}</h3>
             <p>{{travCtrl.item.description}}</p>
-            <p>Number of participants: {{travCtrl.item.numPeople}}</p>
-            <p>Mode of transportation: {{travCtrl.item.transportation}}</p>
-            <p>Location: {{travCtrl.item.location}}</p>
-            <p>Carpool: <span ng-show="travCtrl.item.carpool.isTrue">Yes</span>
+            <p><span style="color: #42DCA3; font-size: 18px">Number of participants</span>: {{travCtrl.item.numPeople}}<br/>
+                <span ng-repeat="item in travCtrl.people"><a ui-sref="site.profile">{{item.name}}</a><br/></span>
+            </p>
+            <p><span style="color: #42DCA3; font-size: 18px">Mode of transportation</span>: {{travCtrl.item.transportation}}</p>
+            <p><span style="color: #42DCA3; font-size: 18px">Location</span>: {{travCtrl.item.location}}</p>
+            <p><span style="color: #42DCA3; font-size: 18px">Carpool</span>: <span ng-show="travCtrl.item.carpool.isTrue">Yes</span>
                 <span ng-show="!travCtrl.item.carpool.isTrue">No</span>
-                <span ng-show="travCtrl.item.carpool.isTrue" style="padding-left: 2em">
+                <span ng-show="travCtrl.item.carpool.isTrue">
                     <br/>
-                    Available Seats: {travCtrlctrl.item.carpool.seats}} <br/>
-                    <span style="padding-left: 2em"></span>Pickup Location: {{travCtrl.item.carpool.location}} <br/>
-                    <span style="padding-left: 4em"></span>{{travCtrl.item.carpool.location2}} <br/>
-                    <span style="padding-left: 2em"></span>Departure: {{travCtrl.item.carpool.date}} {{travCtrl.item.carpool.time}}<br/>
+                    Available Seats: {{travCtrl.item.carpool.seats}} <br/>
+                    Pickup Location: {{travCtrl.item.carpool.location}} <br/>
+                    {{travCtrl.item.carpool.location2}} <br/>
+                    Departure: {{travCtrl.item.carpool.date}} {{travCtrl.item.carpool.time}}<br/>
                 </span>
             </p>
             <button class="button btn-lg btn-default icon-pencil pull-right" style="margin-left: 15px;" ng-click="travCtrl.edit = true">Manage Group</button>
@@ -37,25 +39,31 @@
                 <br>
                 <h4>Update Travel Group Information</h4>
                 <div class="form-group has-feedback">
-                    <label class="control-label">Name</label>
+                    <label class="control-label fontSize15 ">Name</label>
                     <div>
                         <input type="text" ng-model="travCtrl.item.name" class="form-control" name="name" placeholder="">
                     </div>
                 </div>
                 <div class="form-group has-feedback">
-                    <label class="control-label">Event</label>
-                    <div>
-                        <input type="text" ng-model="travCtrl.item.event" class="form-control" name="name" placeholder="">
+                        <label class="control-label fontSize15 ">Event </label>
+                        <div class="row">
+                            <div class="col-xs-8">
+                                <input type="text" ng-model="travCtrl.newItem.event" class="form-control" name="name" placeholder="">
+                            </div>
+                            <div class="col-xs-4">
+                                <button class="button btn-default">Search</button>
+                                <input style="color:black;" type="text"/>
+                            </div>
+                        </div>
                     </div>
-                </div>
                 <div class="form-group has-feedback">
-                    <label class="control-label">Description</label>
+                    <label class="control-label fontSize15 ">Description</label>
                     <div>
                         <textarea ng-model="travCtrl.item.description" rows="4" class="form-control" name="description" style="resize: none"></textarea>
                     </div>
                 </div>
                 <div class="form-group has-feedback">
-                    <label class="control-label">Mode of Transportation</label>
+                    <label class="control-label fontSize15 ">Mode of Transportation</label>
                     <div>
                         <select style="background-color: black;" ng-model="travCtrl.item.transportation">
                             <option value="Car">Car</option>
@@ -68,38 +76,38 @@
                     </div>
                 </div>
                 <div class="form-group has-feedback">
-                    <label class="control-label">Location</label>
+                    <label class="control-label fontSize15 ">Location</label>
                     <div>
                         <input type="text" ng-model="travCtrl.item.location" class="form-control" name="name" placeholder="">
                     </div>
                 </div>
                 <div class="form-group has-feedback">
-                    <label class="control-label">Carpool</label>
+                    <label class="control-label fontSize15 ">Carpool</label>
                     <div>
                         <input type="checkbox" ng-model="travCtrl.item.carpool.isTrue"/>
                     </div>
                 </div>
                 <div ng-show="travCtrl.item.carpool.isTrue" style="margin-left: 2em">
                     <div class="form-group has-feedback">
-                        <label class="control-label">Available Seats</label>
+                        <label class="control-label fontSize15 ">Available Seats</label>
                         <div>
                             <input type="number" class="form-control" ng-model="travCtrl.item.carpool.seats"/>
                         </div>
                     </div>
                     <div class="form-group has-feedback">
-                        <label class="control-label">Date</label>
+                        <label class="control-label fontSize15 ">Date</label>
                         <div>
                             <input type="text" class="form-control" ng-model="travCtrl.item.carpool.date" placeholder="mm/dd/yyyy"/>
                         </div>
                     </div>
                     <div class="form-group has-feedback">
-                        <label class="control-label">Time</label>
+                        <label class="control-label fontSize15 ">Time</label>
                         <div>
                             <input type="text" class="form-control" ng-model="travCtrl.item.carpool.time" placeholder="00:00 AM/PM"/>
                         </div>
                     </div>
                     <div class="form-group has-feedback">
-                        <label class="control-label">Pickup Location</label>
+                        <label class="control-label fontSize15 ">Pickup Location</label>
                         <div>
                             <input type="text" class="form-control" ng-model="travCtrl.item.carpool.location" placeholder="Street name"/>
                         </div>

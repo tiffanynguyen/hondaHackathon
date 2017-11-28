@@ -2,7 +2,7 @@
 <div class="container">
     <div class="page-header row">
         <div class="col-xs-2">
-            <img src="http://laoblogger.com/images/default-profile-picture-5.jpg" style="height:100px;width:100px">
+            <img src="https://trello-avatars.s3.amazonaws.com/154744ab89f82059e73091896c9e8001/original.png" style="height:100px;width:100px">
             <div class="m-b-10">
                 <a href="#" class="btn btn-warning btn-block btn-sm" ng-click="$ctrl.openModal()" style="width:100px">Change Picture</a>
             </div>
@@ -16,7 +16,7 @@
         <!-- core-info -->
         <div class="col-md-3 col-xs-9">
             <h3>User Info
-                <a href='#' ng-click="pCtrl.edit.user = 'true'">edit</a>
+                <a href="#" ng-click="pCtrl.edit.user = 'true'">edit</a>
             </h3>
             <div ng-hide="pCtrl.edit.user">
                 <p>Name: {{pCtrl.profile.name}}</p>
@@ -42,7 +42,7 @@
         <!-- group-info -->
         <div class="col-md-3 col-xs-9">
             <h3>Group Info
-                <a href='#'>edit</a>
+                <a ui-sref="site.travelgroups">edit</a>
             </h3>
             <p>{{pCtrl.group.name}}</p>
             <h4 style="display:inline;">Members</h4>
@@ -78,7 +78,7 @@
                 <a href='#' ng-click="pCtrl.edit.friends = 'true'">edit</a>
             </h3>
             <div ng-repeat="friend in pCtrl.friends" style="border: solid 1px; border-color:white; border-radius: 5px; margin: 5px; padding: 5px">
-                <img src="http://laoblogger.com/images/default-profile-picture-5.jpg" style="height:50px;width:50px">
+                <img ng-src="{{friend.img}}" style="height:50px;width:50px">
                 <span>Name: {{friend.name}}</span>
                 <br>
                 <span>Current Location: {{friend.location}}</span>
