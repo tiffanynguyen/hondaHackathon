@@ -1,24 +1,23 @@
 <div class="container">
-    </br>
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8">
             <form id="loginForm" ng-show="$ctrl.showLoginForm" novalidate>
                 <h4>Login</h4>
                 <label style="font-size:15px">Username</label>
-                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-form">
                     <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
                 </div>
                 <label style="font-size:15px">Password</label>
-                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-form">
                     <input type="password" class="form-control" id="inlineFormInputGroup">
                 </div>
-                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-form">
                     <label style="font-size:15px" class="inline" for="checkbox">
                         <input type="checkbox"> Remember Me
                     </label>
                 </div>
                 <label></label>
-                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-form">
                     <button type="submit" style="background-color:darkcyan" ng-click="$ctrl.submitLogin()" class="btn">Submit</button>
                 </div>
             </form>
@@ -149,5 +148,5 @@
 
         </div>
     </div>
-    </br>
+
 </div>
