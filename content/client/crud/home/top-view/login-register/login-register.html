@@ -15,11 +15,10 @@
                 <div class="form-check mb-2 mr-sm-2 mb-sm-0">
                     <label class="inline">Remember Me</label>
                     <input class="form-check-input" type="checkbox">
-
                 </div>
                 <label></label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                    <button type="submit" style="background-color:darkcyan" class="btn">Submit</button>
+                    <button type="submit" style="background-color:darkcyan" ng-click="$ctrl.submitLogin()" class="btn">Submit</button>
                 </div>
             </form>
             <form id="registerForm" name="registerForm" ng-show="$ctrl.showRegisterForm" novalidate>
@@ -42,7 +41,7 @@
                 </div>
                 <label></label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                    <button type="submit" style="background-color:darkcyan" class="btn">Submit</button>
+                    <button type="submit" style="background-color:darkcyan" ng-click="$ctrl.submitReg()" class="btn">Submit</button>
                 </div>
             </form>
 
@@ -60,9 +59,12 @@
                     <input type="date" style="color:black">
                 </div>
                 </br>
-                <label style="font-size:15px"> Budget:</label>
-                <input style="color:black" ng-model="$ctrl.inputPriceRange" readonly>
+                <label style="font-size:15px">Budget:</label>
+
                 <div class="range_slider">
+                    <input style="color:black; width:44px" ng-model="$ctrl.inputPriceRange" readonly>
+                    </br>
+                    </br>
                     <span style="font-size:12px" class="pull-left">$0</span>
                     <span style="font-size:12px" class="pull-right">$4k</span>
                     <div id="slidecontainer">
@@ -71,41 +73,73 @@
 
                 </div>
                 </br>
-                <label style="font-size:15px">
-                    <div class="input-group">
-                        <input type="checkbox">Shopping
-                </label>
-                </div>
-                <label>
-                    <div class="input-group">
-                        <input type="checkbox">Outdoors
-                </label>
-                </div>
-                <label>
-                    <div class="input-group">
-                        <input type="checkbox">Restaurants
-                </label>
-                </div>
-                <label>
-                    <div class="input-group">
-                        <input type="checkbox">Bars
-                </label>
-                </div>
-                <label>
-                    <div class="input-group" >
-                        <input type="checkbox">Clubs
-                </label>
-                </div>
-                <label>
-                    <div class="input-group">
-                        <input type="checkbox">Coffee Shops
-                </label>
-                </div>
-                <label>
+                <label style="font-size:15px">Point of Interest:</label>
+                <div class="input-group">
+                    <label style="font-size:15px">
+                        <div class="input-group">
+                            <input type="checkbox">Shopping
+                    </label>
+                    </div>
+                    <label>
+                        <div class="input-group">
+                            <input type="checkbox">Outdoors
+                    </label>
+                    </div>
+                    <label>
+                        <div class="input-group">
+                            <input type="checkbox">Museums
+                    </label>
+                    </div>
+                    <label>
+                        <div class="input-group">
+                            <input type="checkbox">Restaurants
+                    </label>
+                    </div>
+                    <label>
+                        <div class="input-group">
+                            <input type="checkbox">Bars
+                    </label>
+                    </div>
+                    <label>
+                        <div class="input-group">
+                            <input type="checkbox">Clubs
+                    </label>
+                    </div>
+                    <label>
+                        <div class="input-group">
+                            <input type="checkbox">Cafes
+                    </label>
+                    </div>
+                    <label>
                         <div class="input-group">
                             <input type="checkbox">Tea Houses
                     </label>
                     </div>
+                </div>
+                <label style="font-size:15px">Transportation Methods Interested In: </label>
+                <div class="input-group">
+                    <label style="font-size:15px">
+                        <div class="input-group">
+                            <input type="checkbox">Rideshare
+                    </label>
+                    </div>
+                    <label>
+                        <div class="input-group">
+                            <input type="checkbox">Biking
+                    </label>
+                    </div>
+                    <label>
+                        <div class="input-group">
+                            <input type="checkbox">Metro
+                    </label>
+                    </div>
+                    <label>
+                        <div class="input-group">
+                            <input type="checkbox">Car
+                    </label>
+                    </div>
+
+                </div>
             </form>
         </div>
     </div>
