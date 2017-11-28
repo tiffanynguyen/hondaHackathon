@@ -1,13 +1,3 @@
-// (function(){
-//     "use strict";
-//     angular
-//         .module("client.crud")
-//         .component("travelgroupDetails", {
-//             templateUrl: "client/crud/travelgroups/travelgroup.html",
-//             controller: "travelGroupController"
-//         })
-// })();
-
 (function(){
     "use strict";
     angular 
