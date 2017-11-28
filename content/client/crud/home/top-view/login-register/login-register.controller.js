@@ -11,23 +11,7 @@
 
     angular.module('client.crud')
         .controller('loginRegisterController', LoginRegisterController)
-        .directive("dataDateTimePicker", function () {
-            return {
-                restrict: "A",
-                require: "ngModel",
-                link: function (scope, element, attrs, ngModelCtrl) {
-                    var parent = $(element).parent()
-                    var dtp = parent.datetimepicker({
-                        format: "LL",
-                        showTodayButton: true
-                    })
-                    dtp.on("dp.change", function (e) {
-                        ngModelCtrl.$setViewValue(moment(e.date).format("LL"))
-                        scope.$apply()
-                    })
-                }
-            }
-        })
+
     LoginRegisterController.$inject = ['$scope', '$stateParams']
 
     function LoginRegisterController($scope, $stateParams) {
@@ -35,7 +19,7 @@
 
 
         vm.$onInit = init
-
+        vm.sliderChange = _sliderChange
 
         function init() {
             console.log($stateParams)
@@ -53,6 +37,12 @@
                 vm.showLoginForm = false
                 vm.showOptions = true
             }
+
+            
+        }
+
+        function _sliderChange(priceRange) {
+             vm.inputPriceRange = '$' + priceRange
         }
 
     }
