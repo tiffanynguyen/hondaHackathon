@@ -21,8 +21,10 @@
             name: "John Doe",
             age: "22",
             sex: "M",
+            interests:["Cake", "Fun", "Sportsball"]
         }
         vm.group = {
+            name:"Summer Family Trip",
             members:["Tim","Aya","Ed"]
         }
 
