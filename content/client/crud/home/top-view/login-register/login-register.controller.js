@@ -1,4 +1,3 @@
-/* global angular */
 (function () {
     'use strict'
     angular.module('client.crud')
@@ -12,23 +11,37 @@
 
     angular.module('client.crud')
         .controller('loginRegisterController', LoginRegisterController)
-    LoginRegisterController.$inject = ['$stateParams', '$log']
 
-    function LoginRegisterController($stateParams, $log) {
+    LoginRegisterController.$inject = ['$stateParams']
+
+    function LoginRegisterController($stateParams) {
         var vm = this
-        
-        
-        vm.$onInit = init
 
+
+        vm.$onInit = init
+        vm.sliderChange = _sliderChange
 
         function init() {
-            console.log($stateParams)
             vm.selected = $stateParams.selected
-            //based on clicked of dropdown on nav bar
-            
-            
-
+            if ($stateParams.selected == 'login') {
+                vm.showLoginForm = true
+                vm.showRegisterForm = false
+                vm.showOptions = false
+            } else if ($stateParams.selected == 'register') {
+                vm.showRegisterForm = true
+                vm.showLoginForm = false
+                vm.showOptions = false
+            } else {
+                vm.showRegisterForm = false
+                vm.showLoginForm = false
+                vm.showOptions = true
+            }
 
         }
+
+        function _sliderChange(priceRange) {
+             vm.inputPriceRange = '$' + priceRange
+        }
+
     }
 })();

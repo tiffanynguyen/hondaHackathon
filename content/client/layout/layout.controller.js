@@ -5,11 +5,14 @@
     LayoutController.$inject = []
     function LayoutController() {
         var vm = this
+        
 
         init()
 
         function init() {
-
         }
+        
+        
+        
     }
 })();
