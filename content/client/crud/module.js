@@ -38,6 +38,15 @@
                         component: 'userProfile'
                     }
                 }
-            })            
+            }) 
+            .state('site.travelgroups', {
+                url: '/travelgroups',
+                views: {
+                    'content': {
+                        templateUrl: 'client/crud/travelgroups/travelgroups.html',
+                        controller: 'travelGroupsController as travelCtrl'
+                    }
+                }
+            })           
     }
 })();

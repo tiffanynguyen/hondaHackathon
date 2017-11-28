@@ -12,14 +12,16 @@
     angular.module('client.crud')
         .controller('loginRegisterController', LoginRegisterController)
 
-    LoginRegisterController.$inject = ['$stateParams']
+    LoginRegisterController.$inject = ['$stateParams', '$state']
 
-    function LoginRegisterController($stateParams) {
+    function LoginRegisterController($stateParams, $state) {
         var vm = this
 
 
         vm.$onInit = init
         vm.sliderChange = _sliderChange
+        vm.submitLogin = _submitLogin
+        vm.submitReg = _submitReg
 
         function init() {
             vm.selected = $stateParams.selected
@@ -41,6 +43,15 @@
 
         function _sliderChange(priceRange) {
              vm.inputPriceRange = '$' + priceRange
+        }
+
+        function _submitLogin() {
+            $state.go('site.profile', null, {reload:true})
+        }
+        function _submitReg() {
+            vm.showLoginForm = true
+            vm.showRegisterForm = false
+            vm.showOptions = false
         }
 
     }

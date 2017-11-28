@@ -36,3 +36,25 @@ hr.style-four {
 											  transparent)
 }
 
+.travelGroupContainer {
+    overflow: auto;
+    margin-left: -75px;
+    background-color: black;
+    border: #42DCA3 2px solid;
+    width: 700px;
+    height: 400px;
+    right: 5%;
+}
+
+.modal {
+    overflow-y: scroll;
+}
+
+.fontSize14 p {
+    font-size: 14px;
+}
+
+.fontSize15 {
+    font-size: 15px !important;
+}
+
