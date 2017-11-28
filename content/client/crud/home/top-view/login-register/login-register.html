@@ -8,24 +8,14 @@
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                     <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
                 </div>
-<<<<<<< HEAD
-                <label>Password</label>
-                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                    <input type="password" class="form-control" id="inlineFormInputGroup">
-                </div>
-                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                        <label class="inline" for="checkbox">
-                            <input type="checkbox"> Remember Me 
-                        </label>               
-=======
                 <label class="fontSize15">Password</label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                     <input type="password" class="form-control" id="inlineFormInputGroup">
                 </div>
                 <div class="form-check mb-2 mr-sm-2 mb-sm-0">
-                    <label class="inline">Remember Me </label>
-                    <input class="form-check-input" type="checkbox">
->>>>>>> master
+                    <label class="inline"> 
+                    <input type="checkbox">Remember Me
+                </label>
                 </div>
                 <label></label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
@@ -34,11 +24,7 @@
             </form>
             <form id="registerForm" name="registerForm" ng-show="$ctrl.showRegisterForm" novalidate>
                 <h4>Register</h4>
-<<<<<<< HEAD
-                <label>Username</label>
-=======
-                <label class="fontSize15">Name</label>
->>>>>>> master
+                <label class="fontSize15">Username</label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                     <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="coolguy12">
                 </div>
@@ -76,18 +62,14 @@
                 </br>
                 <label style="font-size:15px">Budget:</label>
 
-                <div class="range_slider">
                     <input style="color:black; width:44px" ng-model="$ctrl.inputPriceRange" readonly>
                     </br>
                     </br>
                     <span style="font-size:12px" class="pull-left">$0</span>
-                    <span style="font-size:12px" class="pull-right">$4k</span>
-                    <div id="slidecontainer">
-                        <input type="range" min="0" max="4000" value="0" class="slider" ng-change="$ctrl.sliderChange($ctrl.priceRange)" ng-model="$ctrl.priceRange">
-                    </div>
-
-                </div>
+                    <span style="font-size:12px" class="pull-right">$2k</span>
+                        <input type="range" min="0" max="2000" value="0" class="slider" ng-change="$ctrl.sliderChange($ctrl.priceRange)" ng-model="$ctrl.priceRange">
                 </br>
+                <div style="float:left">
                 <label style="font-size:15px">Point of Interest:</label>
                 <div class="input-group">
                     <label style="font-size:15px">
@@ -131,8 +113,10 @@
                     </label>
                     </div>
                 </div>
+            </div>
+            <div style="float:right">
                 <label style="font-size:15px">Transportation Methods Interested In: </label>
-                <div class="input-group">
+                <div class="input-group" >
                     <label style="font-size:15px">
                         <div class="input-group">
                             <input type="checkbox">Rideshare
@@ -155,7 +139,9 @@
                     </div>
 
                 </div>
+            </div>
             </form>
+            
         </div>
     </div>
     </br>
