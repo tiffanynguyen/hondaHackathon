@@ -1,125 +1,141 @@
-<!-- begin page-header -->
-<div class="container">
-    <div class="page-header row">
-        <h1 style="display:inline;">{{travelCtrl.item.name}}</h1>
-        <div class="col-xs-3 pull-right">
+<div ng-hide="travelCtrl.openGroupDetails || travelCtrl.create">
+        <!-- begin page-header -->
+    <div class="container">
+        <div class="page-header row">
+            <h1 style="display:inline;">Travel Groups</h1>
+            <div class="col-xs-3 pull-right">
+            </div>
         </div>
     </div>
-</div>
 
-<!-- profile-image -->
+    <!-- profile-image -->
 
-<div class="container">
-    <div class="row">
-        <!-- core-info -->
-        <div class="col-md-5 col-xs-9">
-            <h3>Open Travel Groups</h3>
-            <button data-toggle="modal" data-target="#travelGroup">Modal</button>
-            <!-- <p>{{travelCtrl.item.description}}</p>
-            <p>Number of participants: {{travelCtrl.item.numPeople}}</p>
-            <p>Mode of transportation: {{travelCtrl.item.transportation}}</p>
-            <p>Location: {{travelCtrl.item.location}}</p>
-            <p>Carpool: <span ng-show="travelCtrl.item.carpool.isTrue">Yes</span>
-                        <span ng-show="!travelCtrl.item.carpool.isTrue">No</span>
-                    <span ng-show="travelCtrl.item.carpool.isTrue" style="padding-left: 2em">
-                       <br/>
-                        Available Seats: {{travelCtrl.item.carpool.seats}} <br/>
-                        <span style="padding-left: 2em"></span>Pickup Location: {{travelCtrl.item.carpool.location}} <br/>
-                        <span style="padding-left: 4em"></span>{{travelCtrl.item.carpool.location2}} <br/>
-                        <span style="padding-left: 2em"></span>Departure: {{travelCtrl.item.carpool.date}} {{travelCtrl.item.carpool.time}}<br/>
-                    </span>
-            </p> -->
-        </div>
-        <!-- group-info -->
-        <div class="col-md-5 col-xs-9">
-            <h3>My Travel Groups</h3>
-        </div>
-            <ul>
-                <li ng-repeat="item in travelCtrl.myTravelGroups">
-                    <div style="border: solid 2px black; padding: 10px;">
-                        <h4><strong><a href="">{{item.name}}</a> : {{item.event}}</strong></h4>
-                        <p><strong>Mode of transportation: </strong>{{item.transportation}}<br/>
-                        <strong>Number of participants: </strong>{{item.numPeople}}<br/>
-                        <strong>Carpool: </strong><span ng-show="item.carpool">Yes</span><span ng-show="!item.carpool">No</span><br/>
-                        <strong>Location: </strong>{{item.location}}</p>
+        <div class="container">
+            <div class="row">
+                <!-- core-info -->
+                <div class="col-md-5 col-xs-9">
+                    <h3>Open Travel Groups</h3>
+                </div>
+                <!-- group-info -->
+                <div class="col-md-5 col-xs-9">
+                    <button class="button btn-lg btn-default pull-right" ng-click="travelCtrl.create = true">Form New Travel Group</button>
+                    <h3>My Travel Groups</h3>
+                    <div ng-repeat="item in travelCtrl.myTravelGroups">
+                        <div style="border: solid 2px white; padding: 10px">
+                            <button class="button glyphicon glyphicon-remove pull-right" style="background-color: black;"></button>
+                            <h4><strong><a href="" ng-click="travelCtrl.setGroup()">{{item.name}}</a> : {{item.event}}</strong></h4>
+                            <p><strong>Mode of transportation: </strong>{{item.transportation}}<br/>
+                            <strong>Number of participants: </strong>{{item.numPeople}}<br/>
+                            <strong>Carpool: </strong><span ng-show="item.carpool">Yes</span><span ng-show="!item.carpool">No</span><br/>
+                            <strong>Location: </strong>{{item.location}}<br/>
+                            <span style="color:#42DCA3" class="pull-right">{{item.role}}</span>
+                            </p>
+                        </div>
+                        <hr/>
                     </div>
-                    <hr/>
-                </li>
-            </ul>
-
-        <!-- <div class="row">
-            <h3 class="col-xs-3" style="display:inline;">Interests</h3>
-            <div class="input-group sidebar-search col-xs-3">
-                <input type="text" class="form-control" name="pCtrl.searchBar" ng-model="pCtrl.searchBar" placeholder="Search popular interests"
-                />
-                <span class="input-group-btn">
-                    <button class="btn btn-inverse" type="button">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </span>
-
-            </div>
-            <div class="col-md-9 col-xs-9">
-                <ul>
-                    <li ng-repeat="interest in pCtrl.profile.interests">{{interest}}</li>
-                </ul>
-            </div>
-
-        </div> -->
-
-    </div>
-</div>
-
-
-
-<div class="modal fade" role="dialog" id="travelGroup">
-    <div class="modal-dialog" >
-            <div class="container travelGroupContainer col-xs-12 scrollbar style-14" style="overflow:auto; height: 100%">
-                <div class="row">
-                    <!-- core-info -->
-                    
-                    <div>
-                        <div>
-                            <div class="col-xs-5 fontSize14">
-                                <h3>Event: {{travelCtrl.item.event}}</h3>
-                                <p>{{travelCtrl.item.description}}</p>
-                                <p>Number of participants: {{travelCtrl.item.numPeople}}</p>
-                                <p>Mode of transportation: {{travelCtrl.item.transportation}}</p>
-                                <p>Location: {{travelCtrl.item.location}}</p>
-                                <p>Carpool: <span ng-show="travelCtrl.item.carpool.isTrue">Yes</span>
-                                            <span ng-show="!travelCtrl.item.carpool.isTrue">No</span>
-                                        <span ng-show="travelCtrl.item.carpool.isTrue" style="padding-left: 2em">
-                                            <br/>
-                                            Available Seats: {{travelCtrl.item.carpool.seats}} <br/>
-                                            <span style="padding-left: 2em"></span>Pickup Location: {{travelCtrl.item.carpool.location}} <br/>
-                                            <span style="padding-left: 4em"></span>{{travelCtrl.item.carpool.location2}} <br/>
-                                            <span style="padding-left: 2em"></span>Departure: {{travelCtrl.item.carpool.date}} {{travelCtrl.item.carpool.time}}<br/>
-                                        </span>
-                                </p>
-                            </div>
-
-                            <div class="col-xs-7 fontSize14">
-                                    <h3>Map</h3>
-                                    <!-- <p>{{travelCtrl.item.description}}</p>
-                                    <p>Number of participants: {{travelCtrl.item.numPeople}}</p>
-                                    <p>Mode of transportation: {{travelCtrl.item.transportation}}</p>
-                                    <p>Location: {{travelCtrl.item.location}}</p>
-                                    <p>Carpool: <span ng-show="travelCtrl.item.carpool.isTrue">Yes</span>
-                                                <span ng-show="!travelCtrl.item.carpool.isTrue">No</span>
-                                            <span ng-show="travelCtrl.item.carpool.isTrue" style="padding-left: 2em">
-                                                <br/>
-                                                Available Seats: {{travelCtrl.item.carpool.seats}} <br/>
-                                                <span style="padding-left: 2em"></span>Pickup Location: {{travelCtrl.item.carpool.location}} <br/>
-                                                <span style="padding-left: 4em"></span>{{travelCtrl.item.carpool.location2}} <br/>
-                                                <span style="padding-left: 2em"></span>Departure: {{travelCtrl.item.carpool.date}} {{travelCtrl.item.carpool.time}}<br/>
-                                            </span>
-                                    </p> -->
-                                <mid-view></mid-View>
-                            </div>
-                            <hr />
-                        </div>
-                        </div>
                 </div>
             </div>
+        </div>
+</div>
+
+<div id="travelgroupview" ng-if="travelCtrl.openGroupDetails">
+    <div>
+        <br/>
+    <button class="button btn-lg btn-default icon-unshare" ng-click="travelCtrl.setGroup()" style="margin-left: 15px;">Back to Travel Groups</button>
+    <travelgroup-Details></travelgroup-Details>
+    </div>
+</div>
+
+
+<div ng-show="travelCtrl.create">
+    <div>
+        <div>
+            <div class="col-xs-5">
+                    <div>
+                    <br/>
+                    <button class="button btn-lg btn-default icon-unshare" ng-click="travelCtrl.create = false">Back to Travel Groups</button>
+                    <form name="registerForm" novalidate>
+                        <br>
+                        <h4>New Travel Group</h4>
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Name </label>
+                            <div>
+                                <input type="text" ng-model="travelCtrl.newItem.name" class="form-control" name="name" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Event </label>
+                            <div>
+                                <input type="text" ng-model="travelCtrl.newItem.event" class="form-control" name="name" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Description</label>
+                            <div>
+                                <textarea ng-model="travelCtrl.newItem.description" rows="4" class="form-control" name="description" style="resize: none"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Mode of Transportation</label>
+                            <div>
+                                <select style="background-color: black;" ng-model="travelCtrl.newItem.transportation">
+                                    <option value="Car">Car</option>
+                                    <option value="Train/Subway">Train/Subway</option>
+                                    <option value="Bus">Bus</option>
+                                    <option value="Flight">Flight</option>
+                                    <option value="Walk">Walk</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Location</label>
+                            <div>
+                                <input type="text" ng-model="travelCtrl.newItem.location" class="form-control" name="name" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Carpool</label>
+                            <div>
+                                <input type="checkbox" ng-model="travelCtrl.newItem.carpool.isTrue"/>
+                            </div>
+                        </div>
+                        <div ng-show="travelCtrl.newItem.carpool.isTrue" style="margin-left: 2em">
+                            <div class="form-group has-feedback">
+                                <label class="control-label">Available Seats</label>
+                                <div>
+                                    <input type="number" class="form-control" ng-model="travelCtrl.newItem.carpool.seats"/>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label class="control-label">Date</label>
+                                <div>
+                                    <input type="text" class="form-control" ng-model="travelCtrl.newItem.carpool.date" placeholder="mm/dd/yyyy"/>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label class="control-label">Time</label>
+                                <div>
+                                    <input type="text" class="form-control" ng-model="travelCtrl.newItem.carpool.time" placeholder="00:00 AM/PM"/>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label class="control-label">Pickup Location</label>
+                                <div>
+                                    <input type="text" class="form-control" ng-model="travelCtrl.newItem.carpool.location" placeholder="Street name"/>
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control" ng-model="travelCtrl.newItem.carpool.location2" placeholder="City, State, Zip">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-success" ng-click="travelCtrl.create = false; travelCtrl.pushNewItem()">Submit</button>
+                        <button class="btn btn-sm btn-danger" ng-click="travelCtrl.create = false">Cancel</button>
+                    </form>
+            </div>
+            <div class="col-xs-7">
+                
+            </div>
+        </div>
     </div>
 </div>

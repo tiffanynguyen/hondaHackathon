@@ -1,0 +1,116 @@
+<div ng-hide="$ctrl.edit">
+    <div>
+        <div class="col-xs-5 fontSize14">
+            <h3><span style="color: #42DCA3; font-size: 24px">{{$ctrl.item.name}}</span> : {{$ctrl.item.event}}</h3>
+            <p>{{$ctrl.item.description}}</p>
+            <p>Number of participants: {{$ctrl.item.numPeople}}</p>
+            <p>Mode of transportation: {{$ctrl.item.transportation}}</p>
+            <p>Location: {{$ctrl.item.location}}</p>
+            <p>Carpool: <span ng-show="$ctrl.item.carpool.isTrue">Yes</span>
+                <span ng-show="!$ctrl.item.carpool.isTrue">No</span>
+                <span ng-show="$ctrl.item.carpool.isTrue" style="padding-left: 2em">
+                    <br/>
+                    Available Seats: {{$ctrl.item.carpool.seats}} <br/>
+                    <span style="padding-left: 2em"></span>Pickup Location: {{$ctrl.item.carpool.location}} <br/>
+                    <span style="padding-left: 4em"></span>{{$ctrl.item.carpool.location2}} <br/>
+                    <span style="padding-left: 2em"></span>Departure: {{$ctrl.item.carpool.date}} {{$ctrl.item.carpool.time}}<br/>
+                </span>
+            </p>
+            <button class="button btn-lg btn-default icon-pencil pull-right" style="margin-left: 15px;" ng-click="$ctrl.edit = true">Manage Group</button>
+        </div>
+        
+        <div class="col-xs-7 fontSize14">
+            <button style="background-color: black; margin-right: 10px;" class="btn-lg pull-left"><i class="button glyphicon glyphicon-user"></i></button>
+            <h3>Map</h3>
+            <mid-view></mid-View>
+            </div>
+            <hr />
+        </div>
+    </div>
+    
+    <!--Form-->
+    <div ng-show="$ctrl.edit">
+        <div class="col-xs-5 col-xs-offset-right-7">
+            <form name="registerForm" novalidate>
+                <br>
+                <h4>Update Travel Group Information</h4>
+                <div class="form-group has-feedback">
+                    <label class="control-label">Name</label>
+                    <div>
+                        <input type="text" ng-model="$ctrl.item.name" class="form-control" name="name" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group has-feedback">
+                    <label class="control-label">Event</label>
+                    <div>
+                        <input type="text" ng-model="$ctrl.item.event" class="form-control" name="name" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group has-feedback">
+                    <label class="control-label">Description</label>
+                    <div>
+                        <textarea ng-model="$ctrl.item.description" rows="4" class="form-control" name="description" style="resize: none"></textarea>
+                    </div>
+                </div>
+                <div class="form-group has-feedback">
+                    <label class="control-label">Mode of Transportation</label>
+                    <div>
+                        <select style="background-color: black;" ng-model="$ctrl.item.transportation">
+                            <option value="Car">Car</option>
+                            <option value="Train/Subway">Train/Subway</option>
+                            <option value="Bus">Bus</option>
+                            <option value="Flight">Flight</option>
+                            <option value="Walk">Walk</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group has-feedback">
+                    <label class="control-label">Location</label>
+                    <div>
+                        <input type="text" ng-model="$ctrl.item.location" class="form-control" name="name" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group has-feedback">
+                    <label class="control-label">Carpool</label>
+                    <div>
+                        <input type="checkbox" ng-model="$ctrl.item.carpool.isTrue"/>
+                    </div>
+                </div>
+                <div ng-show="$ctrl.item.carpool.isTrue" style="margin-left: 2em">
+                    <div class="form-group has-feedback">
+                        <label class="control-label">Available Seats</label>
+                        <div>
+                            <input type="number" class="form-control" ng-model="$ctrl.item.carpool.seats"/>
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="control-label">Date</label>
+                        <div>
+                            <input type="text" class="form-control" ng-model="$ctrl.item.carpool.date" placeholder="mm/dd/yyyy"/>
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="control-label">Time</label>
+                        <div>
+                            <input type="text" class="form-control" ng-model="$ctrl.item.carpool.time" placeholder="00:00 AM/PM"/>
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="control-label">Pickup Location</label>
+                        <div>
+                            <input type="text" class="form-control" ng-model="$ctrl.item.carpool.location" placeholder="Street name"/>
+                        </div>
+                        <div>
+                            <input type="text" class="form-control" ng-model="$ctrl.item.carpool.location2" placeholder="City, State, Zip">
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-sm btn-success" ng-click="$ctrl.edit = false">Save Changes</button>
+                <button class="btn btn-sm btn-danger" ng-click="$ctrl.edit = false">Cancel</button>
+            </form>
+    </div>
+    <div class="col-xs-7">
+    </div>
+</div>

@@ -1,9 +1,9 @@
 <div>
-    <h2>My Itinerary</h2>
+    <h2><a ui-sref="site.itinerary">My Itinerary</a></h2>
     <ul  class="lowViewContainer scrollbar style-14" style="overflow: auto; list-style: none;">
         <li ng-repeat="item in $ctrl.items">
             <div style="border: solid 2px black; padding: 10px;">
-                <h4><strong><a href="">{{item.event}}</a></strong></h4>
+                <h4><strong><span style="color:#42DCA3">{{item.event}}</span></strong></h4>
                 <p>
                     <strong>Date: </strong>{{item.startDate}} - {{item.endDate}}<br/>
                     <strong>Time: </strong>{{item.startTime}} - {{item.endTime}}<br/>

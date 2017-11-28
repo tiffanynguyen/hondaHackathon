@@ -1,9 +1,10 @@
 <div>
-    <h2>My Travel Groups</h2>
+    <h2><a ui-sref="site.travelgroups">My Travel Groups</a></h2>
     <ul class="lowViewContainer scrollbar style-14" style="overflow: auto; list-style: none;">
         <li ng-repeat="item in $ctrl.items">
             <div style="border: solid 2px black; padding: 10px;">
-                <h4><strong><a href="">{{item.name}}</a> : {{item.event}}</strong></h4>
+                <button style="background-color: black; margin-right: 10px;" class="pull-left"><i class="button glyphicon glyphicon-user"></i></button>
+                <h4><strong><span style="color: #42DCA3">{{item.name}}</span> : {{item.event}}</strong></h4>
                 <p><strong>Mode of transportation: </strong>{{item.transportation}}<br/>
                 <strong>Number of participants: </strong>{{item.numPeople}}<br/>
                 <strong>Carpool: </strong><span ng-show="item.carpool">Yes</span><span ng-show="!item.carpool">No</span><br/>
