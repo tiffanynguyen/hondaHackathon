@@ -13,8 +13,8 @@
     <div class="row">
         <!-- core-info -->
         <div class="col-md-5 col-xs-9">
+            <h3>Open Travel Groups</h3>
             <button data-toggle="modal" data-target="#travelGroup">Modal</button>
-            <h3>Event: {{travelCtrl.item.event}}</h3>
             <!-- <p>{{travelCtrl.item.description}}</p>
             <p>Number of participants: {{travelCtrl.item.numPeople}}</p>
             <p>Mode of transportation: {{travelCtrl.item.transportation}}</p>
@@ -32,10 +32,20 @@
         </div>
         <!-- group-info -->
         <div class="col-md-5 col-xs-9">
-            <h3>Map</h3>
-            <mid-view></mid-View>
+            <h3>My Travel Groups</h3>
         </div>
-
+            <ul>
+                <li ng-repeat="item in travelCtrl.myTravelGroups">
+                    <div style="border: solid 2px black; padding: 10px;">
+                        <h4><strong><a href="">{{item.name}}</a> : {{item.event}}</strong></h4>
+                        <p><strong>Mode of transportation: </strong>{{item.transportation}}<br/>
+                        <strong>Number of participants: </strong>{{item.numPeople}}<br/>
+                        <strong>Carpool: </strong><span ng-show="item.carpool">Yes</span><span ng-show="!item.carpool">No</span><br/>
+                        <strong>Location: </strong>{{item.location}}</p>
+                    </div>
+                    <hr/>
+                </li>
+            </ul>
 
         <!-- <div class="row">
             <h3 class="col-xs-3" style="display:inline;">Interests</h3>

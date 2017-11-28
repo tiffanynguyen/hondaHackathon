@@ -34,6 +34,26 @@
             {name: "Nina Tran"}
         ];
 
+        vm.myTravelGroups = [
+            {
+                name: "Sports Party",
+                event: "Super Bowl 2018",
+                numPeople: 6,
+                transportation: "Car",
+                carpool: true,
+                location: "401 Chicago Ave, Minneapolis, MN 55415"
+
+            },
+            {
+                name: "Weeb Life",
+                event: "Anime Expo 2018",
+                numPeople: 12,
+                transportation: "Train",
+                carpool: false,
+                location: "1201 S Figueroa St, Los Angeles, CA 90015"
+            }
+        ];
+
     }
     
 })();
