@@ -16,6 +16,8 @@
     function ProfileController($log) {
         var vm = this
         vm.$onInit = _init()
+        vm.deleteInterest = _deleteInterest
+        vm.addInterest = _addInterest
 
         vm.profile = {
             name: "John Doe",
@@ -35,10 +37,21 @@
 
         function _init() {
             vm.edit = {
-                user:false,
-                interests:false,
-                friend:false,
+                user: false,
+                interests: false,
+                friend: false,
             }
         }
+
+        function _deleteInterest(idx) {
+            $log.log(idx)
+            vm.profile.interests.splice(idx, 1)
+        }
+
+        function _addInterest(int) {
+            vm.profile.interests.push(int)
+            vm.edit.interests = !vm.edit.interests
+        }
+
     }
 })()

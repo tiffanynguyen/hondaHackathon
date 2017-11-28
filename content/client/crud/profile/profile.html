@@ -12,15 +12,32 @@
 </div>
 
 <div class="container">
-    <div class="row " style="border-bottom: solid 2px; border-color:black;">
+    <div class="row ">
         <!-- core-info -->
         <div class="col-md-3 col-xs-9">
             <h3>User Info
                 <a href='#' ng-click="pCtrl.edit.user = 'true'">edit</a>
             </h3>
-            <p>Name: {{pCtrl.profile.name}}</p>
-            <p>Age: {{pCtrl.profile.age}}</p>
-            <p>Sex: {{pCtrl.profile.sex}}</p>
+            <div ng-hide="pCtrl.edit.user">
+                <p>Name: {{pCtrl.profile.name}}</p>
+                <p>Age: {{pCtrl.profile.age}}</p>
+                <p>Sex: {{pCtrl.profile.sex}}</p>
+            </div>
+            <form ng-show="pCtrl.edit.user">
+                <div class="form-group-inline">
+                    <label class="control-label" for="fName">Name</label>
+                    <input type="text" class="form-control" ng-model="pCtrl.profile.name" name="fName" />
+                </div>
+                <div class="form-group-inline">
+                    <label class="control-label" for="fAge">Age</label>
+                    <input type="text" class="form-control" ng-model="pCtrl.profile.age" name="fAge" />
+                </div>
+                <div class="form-group-inline">
+                    <label class="control-label" for="fSex">Sex</label>
+                    <input type="text" class="form-control" ng-model="pCtrl.profile.sex" name="fSex" />
+                </div>
+                <button class="btn btn-default" ng-click="pCtrl.edit.user = !pCtrl.edit.user">Save</button>
+            </form>
         </div>
         <!-- group-info -->
         <div class="col-md-3 col-xs-9">
@@ -35,17 +52,32 @@
         </div>
         <div class="col-md-3">
             <h3 style="display:inline;">Interests
-                <a href='#' ng-click="pCtrl.edit.interests = 'true'">edit</a>
+                <a ng-hide="pCtrl.edit.interests" href='#' ng-click="pCtrl.edit.interests = 'true'">edit</a>
             </h3>
+            <form ng-if="pCtrl.edit.interests">
+                <div class="form-group-inline">
+                    <label class="control-label" for="fInterests">Name</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="pCtrl.fInterests" name="fInterests" placeholder="interest?" />
+                        <button type="button" class="btn btn-default" ng-click="pCtrl.addInterest(pCtrl.fInterests)">
+                            <i class="fa fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
             <ul>
-                <li ng-repeat="interest in pCtrl.profile.interests">{{interest}}</li>
+                <li ng-repeat="interest in pCtrl.profile.interests">{{interest}}
+                    <button ng-if="pCtrl.edit.interests" type="button" class="btn btn-default" ng-click="pCtrl.deleteInterest($index)">
+                        <i class="fa fa-remove"></i>
+                    </button>
+                </li>
             </ul>
         </div>
         <div class="col-md-3">
             <h3 style="display:inline;">Friends
                 <a href='#' ng-click="pCtrl.edit.friends = 'true'">edit</a>
             </h3>
-            <div ng-repeat="friend in pCtrl.friends">
+            <div ng-repeat="friend in pCtrl.friends" style="border: solid 1px; border-color:white; border-radius: 5px; margin: 5px; padding: 5px">
                 <img src="http://laoblogger.com/images/default-profile-picture-5.jpg" style="height:50px;width:50px">
                 <span>Name: {{friend.name}}</span>
                 <br>
