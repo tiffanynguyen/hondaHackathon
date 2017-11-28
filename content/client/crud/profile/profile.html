@@ -1,5 +1,4 @@
 <!-- begin page-header -->
-<script src="https://use.fontawesome.com/d53ee4dba8.js"></script>
 <div class="container">
     <div class="page-header row">
         <div class="col-xs-2">
@@ -8,47 +7,50 @@
                 <a href="#" class="btn btn-warning btn-block btn-sm" ng-click="$ctrl.openModal()" style="width:100px">Change Picture</a>
             </div>
         </div>
-        <h1 style="display:inline;">{{pCtrl.profile.name}}'s Profile</h1>
+        <h1 class="col-xs-3" style="display:inline;">{{pCtrl.profile.name}}'s Profile</h1>
     </div>
 </div>
 
 <div class="container">
-    <div class="row ">
+    <div class="row " style="border-bottom: solid 2px; border-color:black;">
         <!-- core-info -->
-        <div class="col-md-5 col-xs-9">
-            <h3>User Info</h3>
+        <div class="col-md-3 col-xs-9">
+            <h3>User Info
+                <a href='#' ng-click="pCtrl.edit.user = 'true'">edit</a>
+            </h3>
             <p>Name: {{pCtrl.profile.name}}</p>
             <p>Age: {{pCtrl.profile.age}}</p>
             <p>Sex: {{pCtrl.profile.sex}}</p>
         </div>
         <!-- group-info -->
-        <div class="col-md-5 col-xs-9">
-            <h3>Group Info</h3>
+        <div class="col-md-3 col-xs-9">
+            <h3>Group Info
+                <a href='#'>edit</a>
+            </h3>
             <p>{{pCtrl.group.name}}</p>
-            <p>Members</p>
+            <h4 style="display:inline;">Members</h4>
             <ul>
                 <li ng-repeat="member in pCtrl.group.members">{{member}}</li>
             </ul>
         </div>
-    </div>
-    <div class="row" style="border-bottom: solid 2px; border-color:black;">
-        <h3 class="col-xs-3" style="display:inline;">Interests</h3>
-        <div class="input-group-inline sidebar-search col-xs-3">
-            <lable for="pCtrl.searchBar">Interests: </lable>
-            <input type="text" class="form-control" name="pCtrl.searchBar" ng-model="pCtrl.searchBar" placeholder="Search popular interests"
-            />
-            <span class="input-group-btn">
-                <button class="btn btn-inverse" type="button">
-                    <i class="fa fa-search"></i>
-                </button>
-            </span>
-
+        <div class="col-md-3">
+            <h3 style="display:inline;">Interests
+                <a href='#' ng-click="pCtrl.edit.interests = 'true'">edit</a>
+            </h3>
+            <ul>
+                <li ng-repeat="interest in pCtrl.profile.interests">{{interest}}</li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h3 style="display:inline;">Friends
+                <a href='#' ng-click="pCtrl.edit.friends = 'true'">edit</a>
+            </h3>
+            <div ng-repeat="friend in pCtrl.friends">
+                <img src="http://laoblogger.com/images/default-profile-picture-5.jpg" style="height:50px;width:50px">
+                <span>Name: {{friend.name}}</span>
+                <br>
+                <span>Current Location: {{friend.location}}</span>
+            </div>
         </div>
     </div>
-    <div class="col-md-9 col-xs-9">
-        <ul>
-            <li ng-repeat="interest in pCtrl.profile.interests">{{interest}}</li>
-        </ul>
-    </div>
-</div>
 </div>

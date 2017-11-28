@@ -21,15 +21,24 @@
             name: "John Doe",
             age: "22",
             sex: "M",
-            interests:["Cake", "Fun", "Sportsball"]
+            interests: ["Cake", "Fun", "Sportsball"]
         }
         vm.group = {
-            name:"Summer Family Trip",
-            members:["Tim","Aya","Ed"]
+            name: "Summer Family Trip",
+            members: ["Tim", "Aya", "Ed"]
         }
 
-        function _init() {
+        vm.friends = [
+            { name: 'Jacob', location: "London" },
+            { name: "Apu", location: 'London' },
+            { name: 'Mufasa', location: 'Lion King' }]
 
+        function _init() {
+            vm.edit = {
+                user:false,
+                interests:false,
+                friend:false,
+            }
         }
     }
 })()
