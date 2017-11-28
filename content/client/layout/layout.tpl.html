@@ -11,8 +11,8 @@
         <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="nav navbar-nav pull-right">
-                <li style="padding-left: 15px"><a class="white-words" ui-sref="site.home({selected: 'login'})">Login</a></li>
-                <li><a class="white-words" ui-sref="site.home({selected: 'register'})">Register</a></li>
+                <li style="padding-left: 15px"><a class="white-words" ng-show="lCtrl.hideLoginReg" ui-sref="site.home({selected: 'login'})">Login</a></li>
+                <li><a class="white-words" ng-show="lCtrl.hideLoginReg"  ui-sref="site.home({selected: 'register'})">Register</a></li>
             </ul>
 
             <ul class="nav navbar-nav">
@@ -30,7 +30,7 @@
                 <li><a class="dropdown white-words" ui-sref="site.travelgroups" href="#">Travel Groups</a></li>
 
                 <li>
-                    <a ui-sref="site.profile" class="dropdown-toggle white-words" data-toggle="dropdown">My Profile</a>
+                    <a ui-sref="site.profile" class="dropdown-toggle white-words" ng-hide="lCtrl.hideLoginReg" data-toggle="dropdown">My Profile</a>
                     <ul class="dropdown-menu">
                         <li><a ui-sref="site.home({selected: 'itinerary'})">My Itinerary</a></li>
                         <li><a href="#" ng-click="lCtrl.selected = 'interests' ">Interests</a></li>

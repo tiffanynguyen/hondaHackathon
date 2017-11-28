@@ -1,16 +1,55 @@
-<div>
+<div ng-class="{'col-xs-6': $ctrl.defaultItinerary}">
     <h2><a ui-sref="site.itinerary">My Itinerary</a></h2>
-    <ul  class="lowViewContainer scrollbar style-14" style="overflow: auto; list-style: none;">
+    <ul class="lowViewContainer scrollbar style-14" style="overflow: auto; list-style: none;">
         <li ng-repeat="item in $ctrl.items">
             <div style="border: solid 2px black; padding: 10px;">
-                <h4><strong><span style="color:#42DCA3">{{item.event}}</span></strong></h4>
+                <div class="row">
+                    <h4 class="col-xs-9">
+                        <strong>
+                            <span style="color:#42DCA3">{{item.name}}</span>
+                        </strong>
+                    </h4>
+                    <div class="col-xs-1">
+                        <button type="button" class="btn btn-default" ng-click="$ctrl.removeEvent($index)">Remove</button>
+                    </div>
+                </div>
                 <p>
-                    <strong>Date: </strong>{{item.startDate}} - {{item.endDate}}<br/>
-                    <strong>Time: </strong>{{item.startTime}} - {{item.endTime}}<br/>
+                    <strong>Date: </strong>{{item.startDate}} - {{item.endDate}}
+                    <br/>
+                    <strong>Time: </strong>{{item.startTime}} - {{item.endTime}}
+                    <br/>
                     <strong>Location: </strong>{{item.location}}
                 </p>
             </div>
-            <hr class="style-four"/>
+            <hr class="style-four" />
+        </li>
+    </ul>
+</div>
+
+<div ng-if='$ctrl.defaultItinerary' ng-class="{'col-xs-6': $ctrl.defaultItinerary}">
+    <h2>Suggested events</h2>
+    <ul class="lowViewContainer scrollbar style-14" style="overflow: auto; list-style: none;">
+        <li ng-repeat="item in $ctrl.defaultItinerary">
+            <div style="border: solid 2px black; padding: 10px;">
+                <div class="row">
+                    <h4 class="col-xs-9">
+                        <strong>
+                            <a href="">{{item.name}}</a>
+                        </strong>
+                    </h4>
+                    <div class="col-xs-1 col-xs-offset-1">
+                        <button type="button" class="btn btn-default" ng-click="$ctrl.addEvent($index)">Add</button>
+                    </div>
+                </div>
+                <p>
+                    <strong>What?: </strong>{{item.blurb}}
+                    <br/>
+                    <strong>When?: </strong>{{item.startDate}} at {{item.startTime }} - {{item.endDate}} at {{item.endTime}}
+                    <br/>
+                    <strong>Where?: </strong>{{item.location}}
+                </p>
+            </div>
+            <hr class="style-four" />
         </li>
     </ul>
 </div>

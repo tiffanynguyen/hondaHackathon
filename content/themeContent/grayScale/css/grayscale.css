@@ -101,6 +101,7 @@ a {
   color: white;
   background: url("http://www.electricuniverseca.com/wp-content/uploads/2014/12/LA2.jpg") no-repeat bottom center scroll;
   background-color: black;
+  background-position-y:-100px;  
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
