@@ -14,7 +14,9 @@
                 abstract: true,
                 views: {
                     root: {
-                        templateUrl: 'client/layout/layout.tpl.html'
+                        templateUrl: 'client/layout/layout.tpl.html',
+                        controller: 'layoutController as lCtrl'
+
                     }
                 }
             })

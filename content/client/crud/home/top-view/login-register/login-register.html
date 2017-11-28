@@ -1,4 +1,4 @@
-<form class="form-inline" ng-show="$ctrl.showForm">
+<form class="form-inline" ng-show="$ctrl.selected =='login' ">
     <label class="sr-only" for="inlineFormInputGroup">Username</label>
     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
         <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
@@ -15,13 +15,13 @@
     <button type="submit" class="btn btn-sm btn-success">Submit</button>
 </form>
 
-<div class="row" ng-show="$ctrl.showForm">
+<div class="row" ng-show="$ctrl.selected =='register' ">
     <!-- begin col-6 -->
     <div class="col-md-12">
         <!-- begin panel -->
         <div class="panel panel-inverse" data-sortable-id="form-stuff-3">
             <div class="panel-heading">
-                <h4 class="panel-title">Register Here!</h4>
+                <h4 class="panel-title"></h4>
             </div>
             <div class="panel-body">
                 <form name="registerForm" novalidate>

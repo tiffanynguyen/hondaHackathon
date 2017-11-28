@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4">
+            <h2>My Itinerary</h2>
+            <div ng-repeat="item in $ctrl.items">
+                <div style="border: solid 2px black; padding: 10px;">
+                    <h4><strong>{{item.event}}</strong></h4>
+                    <p><strong>Date: </strong>{{item.startDate}} - {{item.endDate}}</p>
+                    <p><strong>Time: </strong>{{item.startTime}} - {{item.endTime}}</p>
+                    <p><strong>Location: </strong>{{item.location}}</p>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
