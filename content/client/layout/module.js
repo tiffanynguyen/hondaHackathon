@@ -14,24 +14,9 @@
                 abstract: true,
                 views: {
                     root: {
-                        templateUrl: 'client/layout/layout.tpl.html'
-                    }
-                }
-            })
-            .state('site.home', {
-                url: '/home',
-                views: {
-                    'content': {
-                        templateUrl: 'client/crud/home.home.html',
-                        controller: 'homeController as hCtrl'
-                    }
-                }
-            })
-            .state('site.profile', {
-                url: '/profile',
-                views: {
-                    'content': {
-                        component: 'userProfile'
+                        templateUrl: 'client/layout/layout.tpl.html',
+                        controller: 'layoutController as lCtrl'
+
                     }
                 }
             })
