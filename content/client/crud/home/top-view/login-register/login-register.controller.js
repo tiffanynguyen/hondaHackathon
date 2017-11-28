@@ -6,7 +6,7 @@
             templateUrl: '/client/crud/home/top-view/login-register/login-register.html',
             controller: 'loginRegisterController',
             bindings: {
-                //url: '<'
+                selected: '<'
             }
         })
 
@@ -16,15 +16,16 @@
 
     function LoginRegisterController($stateParams, $log) {
         var vm = this
-
+        
         vm.$onInit = init
 
         init()
 
         function init() {
-            //based on clicked of dropdown on nav bar
 
-            vm.showForm = false
+            //based on clicked of dropdown on nav bar
+            
+            
 
 
         }
