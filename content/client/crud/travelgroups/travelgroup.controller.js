@@ -1,24 +1,23 @@
 (function(){
     "use strict";
-    angular
-        .module("client.crud")
-        .component("travelgroupDetails", {
-            templateUrl: "client/crud/travelgroups/travelgroup.html",
-            controller: "travelGroupController"
-        })
-})();
-
-(function(){
-    "use strict";
     angular 
-        .module("client.crud")
-        .controller("travelGroupController", TravelGroupController);
+    .module("client.crud")
+    .controller("travelGroupController", TravelGroupController);
     
-    TravelGroupController.$inject = [];
-
-    function TravelGroupController() {
+    TravelGroupController.$inject = ["$state"];
+    
+    function TravelGroupController($state) {
         var vm = this;
-
+        
+        vm.reload = _reload;
+        function _reload(){
+            $state.reload();
+        }
+        
+        vm.backRedirect = _backRedirect;
+        function _backRedirect() {
+            $state.go("site.travelgroups");
+        }
         vm.edit = false;
         vm.item = {
             name: "Sports Party",
@@ -65,6 +64,7 @@
                 location: "1201 S Figueroa St, Los Angeles, CA 90015"
             }
         ];
+
 
     }
     

@@ -43,5 +43,32 @@
                     }
                 }
             })           
+            .state('site.bike', {
+                url: '/bikepaths',
+                views: {
+                    'content': {
+                        templateUrl: 'client/crud/maps/bike-map.html',
+                        controller: 'mapController as mpCtrl'
+                    }
+                }
+            })
+            .state('site.metro', {
+                url: '/public-transit',
+                views: {
+                    'content': {
+                        templateUrl: 'client/crud/maps/metro-map.html',
+                        controller: 'mapController as mpCtrl'
+                    }
+                }
+            })
+            .state('site.travelgroup', {
+                url: '/sportsparty',
+                views: {
+                    'content': {
+                        templateUrl: 'client/crud/travelgroups/travelgroup.html',
+                        controller: 'travelGroupController as travCtrl'
+                    }
+                }
+            })            
     }
 })();

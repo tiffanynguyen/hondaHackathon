@@ -2,38 +2,71 @@
     <nav class="navbar navbar-inverse navbar-expand-lg fixed-top" id="mainNav">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <a class="navbar-brand" href="/home/#" style="font-size: 24px; margin: 0 30px; color:#42DCA3">VroO</a>
         </div>
-        <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="nav navbar-nav pull-right">
-                <li style="padding-left: 15px"><a class="white-words fontSize15" ng-show="lCtrl.hideLoginReg" ui-sref="site.home({selected: 'login'})">Login</a></li>
-                <li><a class="white-words fontSize15" ng-show="lCtrl.hideLoginReg"  ui-sref="site.home({selected: 'register'})">Register</a></li>
+                <li style="padding-left: 15px">
+                    <a class="white-words fontSize15" ng-show="lCtrl.hideLoginReg" ui-sref="site.home({selected: 'login'})">Login</a>
+                </li>
+                <li>
+                    <a class="white-words fontSize15" ng-show="lCtrl.hideLoginReg" ui-sref="site.home({selected: 'register'})">Register</a>
+                </li>
             </ul>
 
             <ul class="nav navbar-nav">
+<<<<<<< HEAD
                 <!-- <li><a ui-sref="site.hackers.list">Hackers</a></li> -->
                 <!-- <li class="active"><a href="#">Home</a></li> -->
                 <li><a ui-sref="site.itinerary" class="dropdown white-words" href="#">Itinerary</a></li>
                 <li><a class="dropdown white-words" ui-sref="site.travelgroups" href="#">Travel Groups</a></li>
+=======
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle white-words fontSize15" data-toggle="dropdown">Map</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a ui-sref="site.metro">Metro</a>
+                        </li>
+                        <li>
+                            <a ui-sref="site.bike">Bikes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a ui-sref="site.itinerary" class="dropdown white-words fontSize15">Itinerary</a>
+                </li>
+                <li>
+                    <a class="dropdown white-words fontSize15" ui-sref="site.travelgroups">Travel Groups</a>
+                </li>
+>>>>>>> master
 
                 <li>
-                        <li class="dropdown">
-                                <a ui-sref="site.profile" class="dropdown-toggle white-words fontSize15" ng-hide="lCtrl.hideLoginReg" data-toggle="dropdown">My Profile</a>
-                                <ul class="dropdown-menu">
-                                        <li><a style="cursor:pointer" ng-click="lCtrl.logout()">Logout</a></li>
-                                    </ul>
-                        </li>
+                    <li class="dropdown">
+                        <a ui-sref="site.profile" class="dropdown-toggle white-words fontSize15" ng-hide="lCtrl.hideLoginReg" data-toggle="dropdown">My Profile</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a style="cursor:pointer" ng-click="lCtrl.logout()">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
 
                     <ul class="dropdown-menu">
-                        <li><a ui-sref="site.home({selected: 'itinerary'})">My Itinerary</a></li>
-                        <li><a href="#" ng-click="lCtrl.selected = 'interests' ">Interests</a></li>
-                        <li><a href="#" ng-click="lCtrl.selected = 'recommendations' ">Recommendations</a></li>
-                        <li><a ui-sref="site.home({selected: 'groups'})">Groups</a></li>
+                        <li>
+                            <a ui-sref="site.home({selected: 'itinerary'})">My Itinerary</a>
+                        </li>
+                        <li>
+                            <a href="#" ng-click="lCtrl.selected = 'interests' ">Interests</a>
+                        </li>
+                        <li>
+                            <a href="#" ng-click="lCtrl.selected = 'recommendations' ">Recommendations</a>
+                        </li>
+                        <li>
+                            <a ui-sref="site.home({selected: 'groups'})">Groups</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -44,8 +77,6 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-
-
 
                 </div>
             </div>
@@ -61,6 +92,5 @@
         </div>
     </footer>
 </div>
-
 
 <script src="themeContent/grayScale/js/grayscale.js"></script>
