@@ -17,11 +17,13 @@
     function LoginRegisterController($stateParams, $log) {
         var vm = this
         
+        
         vm.$onInit = init
 
 
         function init() {
             console.log($stateParams)
+            vm.selected = $stateParams.selected
             //based on clicked of dropdown on nav bar
             
             
