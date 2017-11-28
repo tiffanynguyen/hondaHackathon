@@ -100,6 +100,7 @@ a {
   text-align: center;
   color: white;
   background: url("http://www.electricuniverseca.com/wp-content/uploads/2014/12/LA2.jpg") no-repeat bottom center scroll;
+  background-position-y:-100px;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
