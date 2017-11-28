@@ -19,10 +19,9 @@
         
         vm.$onInit = init
 
-        init()
 
         function init() {
-
+            console.log($stateParams)
             //based on clicked of dropdown on nav bar
             
             
