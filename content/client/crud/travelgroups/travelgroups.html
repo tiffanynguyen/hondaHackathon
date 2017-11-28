@@ -15,6 +15,21 @@
                 <!-- core-info -->
                 <div class="col-md-5 col-xs-9">
                     <h3>Open Travel Groups</h3>
+                    <div ng-repeat="item in travelCtrl.openTravelGroups">
+                            <div style="border: solid 2px white; padding: 10px">
+                                <button class="button glyphicon glyphicon-remove pull-right" style="background-color: black;"></button>
+                                <h4><strong><a href="" ng-click="travelCtrl.setGroup()">{{item.name}}</a> : {{item.event}}</strong></h4>
+                                <p><strong>Mode of transportation: </strong>{{item.transportation}}<br/>
+                                <strong>Number of participants: </strong>{{item.numPeople}}<br/>
+                                <strong>Carpool: </strong><span ng-show="item.carpool">Yes</span><span ng-show="!item.carpool">No</span><br/>
+                                <strong>Location: </strong>{{item.location}}<br/>
+                                <span style="color:#42DCA3" class="pull-right">{{item.role}}</span>
+                                </p>
+                                <button class="button btn-default btn-lg" ng-click="travelCtrl.alertRequest()">Join Group</button>
+                                <button class="button btn-default btn-lg" ng-click="travelCtrl.alertRequest2()">Merge Groups</button>
+                            </div>
+                            <hr/>
+                        </div>
                 </div>
                 <!-- group-info -->
                 <div class="col-md-5 col-xs-9">
@@ -50,7 +65,7 @@
 <div ng-show="travelCtrl.create">
     <div>
         <div>
-            <div class="col-xs-5">
+            <div class="col-xs-offset-3 col-xs-6">
                     <div>
                     <br/>
                     <button class="button btn-lg btn-default icon-unshare" ng-click="travelCtrl.create = false">Back to Travel Groups</button>
